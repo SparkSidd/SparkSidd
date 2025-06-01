@@ -1,12 +1,28 @@
-- 👋 Hi, I’m @SparkSidd
-- 👀 I’m interested in gaining knowledge
-- 🌱 I’m currently learning machine learning 
-- 💞️ I’m looking to collaborate on any software work
-- 📫 How to reach me you shouldnt
-- 😄 Pronouns: he
-- ⚡ Fun fact: boring
+# 👋 Hey, I'm Siddharth Kumar
 
-<!---
-SparkSidd/SparkSidd is a ✨ special ✨ repository because its `README.md` (this file) appears on your GitHub profile.
-You can click the Preview link to take a look at your changes.
---->
+🎓 B.Tech CSE ‘27 | Developer across AI/ML, Cybersecurity, Web & more
+
+---
+
+## 🚀 About Me
+
+I'm a tech generalist who enjoys solving real-world problems by building functional, reliable tools.  
+I work across multiple domains — from AI and cybersecurity to full-stack development — and thrive in fast-paced, collaborative environments.
+
+I've also led teams through hackathons and internships, where I focus on getting things done quickly and effectively.
+
+---
+
+## 🧩 Tech Stack & Interests
+
+- **Languages:** Python, C++, Java, JavaScript  
+- **Domains:** AI/ML, Cybersecurity, NLP, CV  
+- **Frameworks & Tools:** React, Flask, Streamlit, OpenCV, TensorFlow, Git, Firebase  
+
+---
+
+## 🤝 Let's Connect
+
+I’m always open to working on meaningful tech, real-world collaborations, or open-source projects.
+
+📬 **Email:** siddharth.sk324@gmail.com
