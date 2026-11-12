@@ -1,41 +1,40 @@
 <div align="center">
 
-# ⚡ Siddharth Kumar
-### Systems Engineer • AI & Multi-Agent Architect • Full-Stack Developer
+<!-- Animated Header Wave/Typing SVG -->
+<a href="https://github.com/SparkSidd">
+  <img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=2,12,24,35&height=220&section=header&text=Siddharth%20Kumar&fontSize=52&fontAlignY=36&animation=fadeIn&fontColor=ffffff&desc=Systems%20Engineer%20%7C%20Multi-Agent%20Architect%20%7C%20Full-Stack%20Developer&descAlignY=62&descSize=19" width="100%" alt="Header" />
+</a>
 
+<!-- Animated Typing SVG -->
 <p align="center">
   <a href="https://github.com/SparkSidd">
-    <img src="https://komarev.com/ghpvc/?username=SparkSidd&color=7928CA&style=for-the-badge&label=PROFILE+VIEWS" alt="Profile Views" />
+    <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=20&duration=3000&pause=1000&color=60A5FA&center=true&vCenter=true&random=false&width=650&lines=Building+Decentralized+AMR+Fleet+Coordination;Researching+Indoor+Acoustic+Source+Localization;Developing+AI-Native+Intelligence+Co-Pilots;Engineering+Resilient+High-Performance+Distributed+Systems" alt="Typing SVG" />
   </a>
 </p>
 
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://linkedin.com)
-[![Portfolio](https://img.shields.io/badge/Live_Portfolio-2563EB?style=for-the-badge&logo=google-chrome&logoColor=white)](https://github.com/SparkSidd/Portfolio)
-[![Email](https://img.shields.io/badge/Email-EA4335?style=for-the-badge&logo=gmail&logoColor=white)](mailto:siddharth.sk324@gmail.com)
+<!-- Live Profile Counter Badge -->
+<p align="center">
+  <a href="https://github.com/SparkSidd">
+    <img src="https://komarev.com/ghpvc/?username=SparkSidd&color=7928CA&style=for-the-badge&label=%F0%9F%91%81%EF%B8%8F+PROFILE+VIEWS" alt="Profile Views" />
+  </a>
+</p>
 
-<br/>
+<p align="center">
+  <a href="https://linkedin.com"><img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" /></a>
+  <a href="https://github.com/SparkSidd/Portfolio"><img src="https://img.shields.io/badge/Live_Portfolio-2563EB?style=for-the-badge&logo=google-chrome&logoColor=white" /></a>
+  <a href="mailto:siddharth.sk324@gmail.com"><img src="https://img.shields.io/badge/Email-EA4335?style=for-the-badge&logo=gmail&logoColor=white" /></a>
+</p>
 
-```text
-  _       _____ _____ _   _ _   _ _____     ____  _  ______  ____  
- | |     |_   _/ ____| \ | | \ | |  __ \   / __ \(_)|___  / |___ \ 
- | |       | || |  __|  \| |  \| | |__) | | |  | |_    / /    __) |
- | |       | || | |_ | . ` | . ` |  _  /  | |  | | |  / /    |__ < 
- | |____  _| || |__| | |\  | |\  | | \ \  | |__| | | / /__  ___) |
- |______||_____\_____|_| \_|_| \_|_|  \_\  \____/|_|/_____||____/ 
-                                                                    
->> B.Tech CSE '27 | Building Resilient Systems, Spatial AI & Distributed Fleets
-```
-
----
+<img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4300-a447-11eb-908a-139a6edaec5c.gif" width="100%" />
 
 </div>
 
 ## 📌 Executive Summary
 
-I architect and engineer **distributed multi-agent systems, acoustic signal processing pipelines, and AI-native web platforms**. My focus is on building high-performance, deterministic software verified through empirical benchmarks and mathematical invariants.
+I architect and engineer **distributed multi-agent systems, acoustic signal processing pipelines, and AI-native web platforms**. My focus is on building deterministic, mathematically sound software backed by empirical simulation benchmarks.
 
-- 🤖 **Multi-Robot Fleet Coordination**: Engineered an edge-native AMR coordination framework solving the SIH'26 / BEL smart warehouse challenge, reducing fleet delay by **24.89%** with **0 inter-robot collisions** across 200 executions.
-- 🚀 **EnCode 2026 @ IIT Guwahati**: Built **IngredientInsightAI**, an intent-first food label intelligence co-pilot using multi-tiered LLM reasoning.
+- 🤖 **Multi-Robot Fleet Coordination**: Engineered an edge-native AMR coordination framework solving the SIH'26 / BEL smart warehouse challenge, reducing task latency by **24.89%** with **0 inter-robot collisions** across 200 simulation executions.
+- 🚀 **EnCode 2026 @ IIT Guwahati**: Built **IngredientInsightAI**, an intent-first nutrition co-pilot using multi-tiered LLM reasoning and calibrated uncertainty.
 - 🔬 **Signal & Systems Engineering**: Authored **EchoLocate**, an acoustic source localization framework evaluating 3,150 environmental simulation permutations.
 
 ---
@@ -134,7 +133,16 @@ I architect and engineer **distributed multi-agent systems, acoustic signal proc
   <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=SparkSidd&layout=compact&theme=tokyonight&hide_border=true&langs_count=8" width="60%" />
 </p>
 
----
+<!-- Animated Activity Snake Eating Contribution Matrix -->
+<div align="center">
+  <img src="https://raw.githubusercontent.com/SparkSidd/SparkSidd/output/github-contribution-grid-snake.svg" alt="Snake animation" />
+</div>
+
+<br/>
+
+<div align="center">
+  <img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=2,12,24,35&height=100&section=footer" width="100%" />
+</div>
 
 <div align="center">
   <sub>Engineered with precision by <strong>Siddharth Kumar</strong>. Open for high-impact research, engineering roles, and collaborative systems.</sub>
