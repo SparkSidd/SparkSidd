@@ -125,17 +125,19 @@ I architect and engineer **distributed multi-agent systems, acoustic signal proc
 ## 📊 Live GitHub Activity & Analytics
 
 <div align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=SparkSidd&show_icons=true&theme=tokyonight&hide_border=true&count_private=true" width="48%" />
-  <img src="https://github-readme-streak-stats.herokuapp.com/?user=SparkSidd&theme=tokyonight&hide_border=true" width="48%" />
+  <img src="https://github-readme-streak-stats.herokuapp.com/?user=SparkSidd&theme=tokyonight&hide_border=true" />
 </div>
 
-<p align="center">
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=SparkSidd&layout=compact&theme=tokyonight&hide_border=true&langs_count=8" width="60%" />
-</p>
+<br/>
 
-<!-- Animated Activity Snake Eating Contribution Matrix -->
+<!-- Animated Contribution Snake Eating Contribution Grid -->
 <div align="center">
-  <img src="https://raw.githubusercontent.com/SparkSidd/SparkSidd/output/github-contribution-grid-snake.svg" alt="Snake animation" />
+  <h3>🐍 Contribution Snake Activity</h3>
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/SparkSidd/SparkSidd/output/github-contribution-grid-snake-dark.svg">
+    <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/SparkSidd/SparkSidd/output/github-contribution-grid-snake.svg">
+    <img alt="github contribution grid snake" src="https://raw.githubusercontent.com/SparkSidd/SparkSidd/output/github-contribution-grid-snake-dark.svg" width="90%">
+  </picture>
 </div>
 
 <br/>
