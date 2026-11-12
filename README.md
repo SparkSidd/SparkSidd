@@ -32,11 +32,11 @@
 
 ## 📌 Executive Summary
 
-I architect and engineer **distributed multi-agent systems, acoustic signal processing pipelines, and AI-native web platforms**. My work bridges algorithmic theory with production software — verified across physical simulation benchmarks, mathematical invariants, and zero-downtime microservices.
+I architect and engineer **distributed multi-agent systems, acoustic signal processing pipelines, and AI-native web platforms**. My focus is on building high-performance, deterministic software verified through empirical benchmarks and mathematical invariants.
 
-- 🥇 **Smart India Hackathon 2026 Finalist**: Engineered a decentralized, edge-native AMR coordination framework (BEL problem statement) cutting fleet delay by **24.89%** with **0 inter-robot collisions**.
-- 🚀 **EnCode 2026 @ IIT Guwahati**: Built **IngredientInsightAI**, an intent-native food label intelligence co-pilot using multi-tiered LLM reasoning.
-- 🔬 **Signal & Systems Research**: Authored **EchoLocate**, an acoustic source localization framework evaluating 3,150 environmental simulation permutations.
+- 🤖 **Multi-Robot Fleet Coordination**: Engineered an edge-native AMR coordination framework solving the SIH'26 / BEL smart warehouse challenge, reducing fleet delay by **24.89%** with **0 inter-robot collisions** across 200 executions.
+- 🚀 **EnCode 2026 @ IIT Guwahati**: Built **IngredientInsightAI**, an intent-first food label intelligence co-pilot using multi-tiered LLM reasoning.
+- 🔬 **Signal & Systems Engineering**: Authored **EchoLocate**, an acoustic source localization framework evaluating 3,150 environmental simulation permutations.
 
 ---
 
@@ -68,7 +68,7 @@ I architect and engineer **distributed multi-agent systems, acoustic signal proc
   <tr>
     <td width="50%" valign="top">
       <h3>🤖 <a href="https://github.com/SparkSidd/SIH-26">AMR-Fleet-Coordination</a></h3>
-      <p>Decentralized AMR fleet coordination for smart warehouses (BEL SIH'26). Features Hungarian task allocation, Space-Time A*, PIBT negotiation, and Tarjan cycle-breaking.</p>
+      <p>Decentralized AMR fleet coordination for smart warehouses (BEL challenge). Features Hungarian task allocation, Space-Time A*, PIBT negotiation, and Tarjan cycle-breaking.</p>
       <p>
         <img src="https://img.shields.io/badge/Tests-121%2F121%20PASS-brightgreen?style=flat-square" />
         <img src="https://img.shields.io/badge/Collisions-0-blue?style=flat-square" />
