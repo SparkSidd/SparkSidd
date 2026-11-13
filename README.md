@@ -125,7 +125,7 @@ I architect and engineer **distributed multi-agent systems, acoustic signal proc
 ## 📊 Live GitHub Activity & Analytics
 
 <div align="center">
-  <img src="https://github-readme-streak-stats.herokuapp.com/?user=SparkSidd&theme=tokyonight&hide_border=true&v=20261113060110" />
+  <img src="https://streak-stats.demolab.com/?user=SparkSidd&theme=tokyonight&hide_border=true&v=20261113060110" />
 </div>
 
 <br/>
