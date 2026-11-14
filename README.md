@@ -40,89 +40,13 @@
 
 ---
 
-### `/etc/systemd/system/siddharth.service`
+### 💻 Architecture & Systemd Daemon Status
 
-```ini
-[Unit]
-Description=Siddharth Kumar (Autonomous Robotics & Systems Architect)
-Documentation=https://www.siddharth.buzz/
-After=caffeine.target ros2_daemon.service network-online.target
-ConditionPathExists=/dev/coffee
-
-[Service]
-Type=simple
-ExecStart=/usr/bin/engineer \
-    --fleet-coordination=decentralized \
-    --pathfinding=space-time-a-star \
-    --collision-tolerance=0.00 \
-    --caffeine-intake=excessive
-Restart=always
-RestartSec=5s
-Environment="REALITY_CHECK=IGNORED_IN_FAVOR_OF_SIMULATION"
-MemoryMax=unlimited
-StandardOutput=journal
-
-[Diagnostics]
-AMRFleetCollisions=0 (across 200 simulation executions)
-TaskLatencySaved=24.89% (over centralized greedy dispatch)
-AcousticPermutations=3150 (evaluated without destroying room acoustics)
-TestSuiteStatus=121/121 PASS (miraculously)
-```
-
----
-
-### 💻 Interactive CLI Simulator (Click to Execute Commands)
-
-<details>
-  <summary><code>$ sparksidd --status</code></summary>
-  <br/>
-
-```json
-{
-  "engineer": "Siddharth Kumar",
-  "kernel": "Linux 6.x (Sikkim, India)",
-  "uptime": "24/7 autonomous loop",
-  "active_daemons": [
-    "pibt_token_manager (RUNNING)",
-    "gcc_phat_multilateration_engine (RUNNING)",
-    "caffeine_synthesizer (CRITICAL_LEVEL)"
-  ],
-  "collision_count": 0,
-  "compilation_status": "0 errors, 0 warnings"
-}
-```
-
-</details>
-
-<details>
-  <summary><code>$ sparksidd --run-benchmark --target=amr-fleet --agents=200</code></summary>
-  <br/>
-
-```bash
-[INIT] Spawning 200 decentralized mobile robots on 50x50 warehouse grid...
-[00.12s] Hungarian Algorithm: 200/200 tasks allocated with minimal Euclidean distance.
-[00.34s] Space-Time A*: 4D reservation tables generated. Time horizon = 120s.
-[00.48s] PIBT Conflict Resolution: 34 potential bottleneck crossings detected.
-[00.51s] Cycle Check: Tarjan algorithm identified 2 cyclical dependencies.
-[00.52s] RESOLVED: Priority tokens swapped in 1.4ms. Zero deadlock cycles remaining.
-[BENCHMARK RESULT] Collisions: 0 | Latency Reduction: 24.89% | Status: 121/121 PASS
-```
-
-</details>
-
-<details>
-  <summary><code>$ sparksidd --hire</code></summary>
-  <br/>
-
-```bash
-[QUERY] Checking availability for Systems & Robotics Engineering roles...
-[RESULT] STATUS: OPEN FOR OFFERS & RESEARCH COLLABORATIONS.
-[CONTACT] Direct email: siddharth.sk324@gmail.com
-[PORTFOLIO] Live projects & deep dives: https://www.siddharth.buzz/
-[RESUME] Available immediately upon request.
-```
-
-</details>
+<div align="center">
+  <!-- Systemd Service & CLI Benchmark Terminal Window -->
+  <img src="assets/terminal_system.svg" width="100%" alt="Systemd Service Telemetry & Terminal" />
+  <p><sub><strong>Fig 3:</strong> Active <code>systemd</code> daemon lifecycle (<code>siddharth.service</code>) and real-time PIBT multi-agent benchmark execution.</sub></p>
+</div>
 
 ---
 
@@ -274,31 +198,14 @@ TestSuiteStatus=121/121 PASS (miraculously)
 </details>
 
 <details>
-  <summary><b>📡 [Sensor Telemetry] EchoLocate 4-Microphone Array Geometries &amp; TDOA Vectors</b></summary>
-  <br/>
-
-```
-Array Configuration: 4-Channel Non-Coplanar Tetrahedron & Circular Topologies
-Sampling Rate:       44,100 Hz (Nyquist-Compliant)
-TDOA Algorithm:      Generalized Cross-Correlation with Phase Transform (GCC-PHAT)
-Multilateration:     Non-Linear Least Squares (Levenberg-Marquardt Formulation)
-Permutations:        3,150 Simulation Grid Iterations across Varying RT60 Decay Times
-Outcome:             Sub-centimeter Euclidean Error under Additive White Gaussian Noise
-```
-
-</details>
-
-<details>
   <summary><b>🚨 [Incident Postmortem] INCIDENT-2026-042: Near-Collision Cycle Resolution</b></summary>
   <br/>
 
-```
-[03:14:02 UTC] AMR_NODE_03 requested priority lock on grid coordinates (X:14, Y:22, T:45).
-[03:14:02 UTC] WARNING: AMR_NODE_07 currently occupies target cell. Collision probability: 1.0.
-[03:14:03 UTC] PIBT (Priority Inheritance Backtracking) token passed. Tarjan cycle detected.
-[03:14:03 UTC] Cycle broken in 1.2ms. AMR_NODE_03 recalculated alternative 4D Space-Time path.
-[03:14:04 UTC] Hardware spared. No paint scratched. Simulation resumes with 0 collisions.
-```
+> [!WARNING]
+> **[03:14:02 UTC]** `AMR_NODE_03` requested reservation lock on grid cell `(X:14, Y:22, T:45)`.  
+> **[03:14:02 UTC]** `AMR_NODE_07` currently occupies cell. Potential collision vector detected.  
+> **[03:14:03 UTC]** PIBT priority token exchanged. Tarjan cycle resolved in **1.2ms**.  
+> **[03:14:04 UTC]** `AMR_NODE_03` redirected via dynamic 4D Space-Time detour. **0 collisions occurred. Hardware intact.**
 
 </details>
 
