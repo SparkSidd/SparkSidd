@@ -8,7 +8,7 @@
 <!-- Animated Typing SVG -->
 <p align="center">
   <a href="https://github.com/SparkSidd">
-    <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=20&duration=3000&pause=1000&color=60A5FA&center=true&vCenter=true&random=false&width=650&lines=Building+Decentralized+AMR+Fleet+Coordination;Researching+Indoor+Acoustic+Source+Localization;Developing+AI-Native+Intelligence+Co-Pilots;Engineering+Resilient+High-Performance+Distributed+Systems" alt="Typing SVG" />
+    <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=20&duration=3000&pause=1000&color=60A5FA&center=true&vCenter=true&random=false&width=700&lines=Building+Decentralized+AMR+Fleet+Coordination;Researching+Indoor+Acoustic+Source+Localization;Developing+AI-Native+Intelligence+Co-Pilots;Engineering+Resilient+Distributed+Systems" alt="Typing SVG" />
   </a>
 </p>
 
