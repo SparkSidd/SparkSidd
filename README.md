@@ -24,6 +24,15 @@
 
 ---
 
+### 📡 Live Multi-Agent Simulation Telemetry
+
+<div align="center">
+  <img src="assets/simulation_radar.svg" width="100%" alt="AMR Coordination Radar" />
+  <p><sub>Real-time 2D simulation radar tracking decentralized AMR conflict resolution &amp; space-time trajectory allocation.</sub></p>
+</div>
+
+---
+
 ### `/etc/systemd/system/siddharth.service`
 
 ```ini
@@ -68,6 +77,10 @@ TestSuiteStatus=121/121 PASS (miraculously)
         <img src="https://img.shields.io/badge/Latency%20Saved-24.89%25-F59E0B?style=flat-square" />
         <img src="https://img.shields.io/badge/Tests-121%2F121%20PASS-34D399?style=flat-square" />
       </p>
+      <p>
+        <a href="https://sih-26-in4c.onrender.com"><b>▶ Launch Live Digital Twin</b></a> • 
+        <a href="https://github.com/SparkSidd/SIH-26"><b>Inspect Codebase</b></a>
+      </p>
     </td>
     <td width="50%" valign="top">
       <h4>📡 <a href="https://github.com/SparkSidd/EchoLocate">EchoLocate</a></h4>
@@ -77,6 +90,9 @@ TestSuiteStatus=121/121 PASS (miraculously)
         <img src="https://img.shields.io/badge/Simulations-3%2C150%20Grid_Runs-A855F7?style=flat-square" />
         <img src="https://img.shields.io/badge/Tests-39%20PASS-34D399?style=flat-square" />
         <img src="https://img.shields.io/badge/Engine-PyRoomAcoustics-38BDF8?style=flat-square" />
+      </p>
+      <p>
+        <a href="https://github.com/SparkSidd/EchoLocate"><b>▶ Inspect TDOA Pipeline</b></a>
       </p>
     </td>
   </tr>
@@ -90,6 +106,9 @@ TestSuiteStatus=121/121 PASS (miraculously)
         <img src="https://img.shields.io/badge/Engine-SimPy-34D399?style=flat-square" />
         <img src="https://img.shields.io/badge/API-FastAPI-009688?style=flat-square" />
       </p>
+      <p>
+        <a href="https://github.com/SparkSidd/ChainShield"><b>▶ View MIP Formulations</b></a>
+      </p>
     </td>
     <td width="50%" valign="top">
       <h4>🥗 <a href="https://github.com/SparkSidd/IngredientInsightAI">IngredientInsightAI</a></h4>
@@ -99,6 +118,9 @@ TestSuiteStatus=121/121 PASS (miraculously)
         <img src="https://img.shields.io/badge/Hackathon-EnCode%202026-A855F7?style=flat-square" />
         <img src="https://img.shields.io/badge/Frontend-Next.js%2014-000000?style=flat-square" />
         <img src="https://img.shields.io/badge/LLM-Gemini%20API-4285F4?style=flat-square" />
+      </p>
+      <p>
+        <a href="https://github.com/SparkSidd/IngredientInsightAI"><b>▶ View EnCode '26 Repo</b></a>
       </p>
     </td>
   </tr>
@@ -112,6 +134,9 @@ TestSuiteStatus=121/121 PASS (miraculously)
         <img src="https://img.shields.io/badge/Deploy-Docker%20%7C%20Nginx-2496ED?style=flat-square" />
         <img src="https://img.shields.io/badge/Backend-FastAPI-009688?style=flat-square" />
       </p>
+      <p>
+        <a href="https://github.com/SparkSidd/MindBridge"><b>▶ View NLP Architecture</b></a>
+      </p>
     </td>
     <td width="50%" valign="top">
       <h4>⚡ <a href="https://github.com/SparkSidd/WebPerfAI">WebPerfAI</a></h4>
@@ -121,9 +146,72 @@ TestSuiteStatus=121/121 PASS (miraculously)
         <img src="https://img.shields.io/badge/Telemetry-PageSpeed%20API-4285F4?style=flat-square" />
         <img src="https://img.shields.io/badge/Stack-React%20%7C%20Node-34D399?style=flat-square" />
       </p>
+      <p>
+        <a href="https://github.com/SparkSidd/WebPerfAI"><b>▶ Audit Telemetry Docs</b></a>
+      </p>
     </td>
   </tr>
 </table>
+
+---
+
+### 🕹️ Interactive System Diagnostics (Click to Expand)
+
+<details>
+  <summary><b>📊 [Empirical Benchmarks] Centralized Greedy vs. Decentralized PIBT &amp; Space-Time A*</b></summary>
+  <br/>
+
+| Evaluation Parameter | Centralized Greedy Dispatch | Decentralized Fleet Framework (Ours) | Delta / Outcome |
+| :--- | :--- | :--- | :--- |
+| **Inter-Robot Collisions** | 14 collisions / 200 runs | **0 collisions** | **100% Elimination** |
+| **Average Task Completion Latency** | 184.2 seconds | **138.4 seconds** | **-24.89% Faster** |
+| **Deadlock Occurrence Frequency** | 18.5% of executions | **0.0% (Tarjan Cycle-Breaking)** | **Complete Deadlock Freedom** |
+| **Solver Computation Overhead** | Exponential $O(N!)$ bottleneck | **Polynomial $O(N \log N)$ distributed** | **Sub-50ms Edge Negotiation** |
+| **Test Suite Coverage** | N/A | **121 / 121 Tests PASS** | **100% Deterministic Verification** |
+
+</details>
+
+<details>
+  <summary><b>📡 [Sensor Telemetry] EchoLocate 4-Microphone Array Geometries &amp; TDOA Vectors</b></summary>
+  <br/>
+
+```
+Array Configuration: 4-Channel Non-Coplanar Tetrahedron & Circular Topologies
+Sampling Rate:       44,100 Hz (Nyquist-Compliant)
+TDOA Algorithm:      Generalized Cross-Correlation with Phase Transform (GCC-PHAT)
+Multilateration:     Non-Linear Least Squares (Levenberg-Marquardt Formulation)
+Permutations:        3,150 Simulation Grid Iterations across Varying RT60 Decay Times
+Outcome:             Sub-centimeter Euclidean Error under Additive White Gaussian Noise
+```
+
+</details>
+
+<details>
+  <summary><b>🚨 [Incident Postmortem] INCIDENT-2026-042: Near-Collision Cycle Resolution</b></summary>
+  <br/>
+
+```
+[03:14:02 UTC] AMR_NODE_03 requested priority lock on grid coordinates (X:14, Y:22, T:45).
+[03:14:02 UTC] WARNING: AMR_NODE_07 currently occupies target cell. Collision probability: 1.0.
+[03:14:03 UTC] PIBT (Priority Inheritance Backtracking) token passed. Tarjan cycle detected.
+[03:14:03 UTC] Cycle broken in 1.2ms. AMR_NODE_03 recalculated alternative 4D Space-Time path.
+[03:14:04 UTC] Hardware spared. No paint scratched. Simulation resumes with 0 collisions.
+```
+
+</details>
+
+<details>
+  <summary><b>🔴 [System Alert] DO NOT CLICK THIS BUTTON</b></summary>
+  <br/>
+
+> **CRITICAL ERROR:** You clicked the forbidden button.  
+> *Simulation Status:* 100% Nominal.  
+> *Collisions:* Still 0.  
+> *All 121 Tests:* Still Passing.  
+>  
+> Since you're curious and thorough: **[⭐ Star the AMR-Fleet-Coordination Repo](https://github.com/SparkSidd/SIH-26)** or email me directly at **[siddharth.sk324@gmail.com](mailto:siddharth.sk324@gmail.com)**.
+
+</details>
 
 ---
 
