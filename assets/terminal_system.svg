@@ -1,9 +1,10 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 840 390" width="100%" height="390">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 840 375" width="100%" height="375">
   <defs>
+    <!-- Background Gradient matching Cockpit Suite -->
     <linearGradient id="termBg" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#070a14" />
-      <stop offset="60%" stop-color="#0b101e" />
-      <stop offset="100%" stop-color="#050810" />
+      <stop offset="0%" stop-color="#050811" />
+      <stop offset="50%" stop-color="#090d1a" />
+      <stop offset="100%" stop-color="#04060d" />
     </linearGradient>
 
     <style>
@@ -12,130 +13,130 @@
         50% { opacity: 0; }
       }
       @keyframes pulseGlow {
-        0%, 100% { opacity: 0.9; }
+        0%, 100% { opacity: 0.95; }
         50% { opacity: 0.4; }
       }
       .cursor-blink { animation: blinkCursor 1s step-start infinite; }
-      .status-pulse { animation: pulseGlow 2.5s ease-in-out infinite; }
+      .status-pulse { animation: pulseGlow 2.2s ease-in-out infinite; }
     </style>
   </defs>
 
-  <!-- Terminal Window Frame -->
-  <rect x="1" y="1" width="838" height="388" rx="10" fill="url(#termBg)" stroke="#1e293b" stroke-width="1.5" />
+  <!-- Container Frame: Exactly matches Radar and Acoustic Scope -->
+  <rect x="1" y="1" width="838" height="373" rx="12" fill="url(#termBg)" stroke="#1e293b" stroke-width="1.5" />
 
-  <!-- Terminal Header / Titlebar -->
-  <path d="M 1 10 Q 1 1 10 1 L 828 1 Q 839 1 839 10 L 839 32 L 1 32 Z" fill="#0d1424" />
-  <line x1="1" y1="32" x2="839" y2="32" stroke="#1e293b" stroke-width="1" />
+  <!-- Window Header / Titlebar -->
+  <path d="M 1 12 Q 1 1 12 1 L 828 1 Q 839 1 839 12 L 839 30 L 1 30 Z" fill="#0b1120" />
+  <line x1="1" y1="30" x2="839" y2="30" stroke="#1e293b" stroke-width="1" />
 
-  <!-- Window Dots -->
-  <circle cx="18" cy="16" r="4.5" fill="#ef4444" />
-  <circle cx="33" cy="16" r="4.5" fill="#f59e0b" />
-  <circle cx="48" cy="16" r="4.5" fill="#10b981" />
+  <!-- Window Dots: Identical placement to Fig 1 & Fig 2 -->
+  <circle cx="16" cy="15" r="4" fill="#ef4444" />
+  <circle cx="30" cy="15" r="4" fill="#f59e0b" />
+  <circle cx="44" cy="15" r="4" fill="#10b981" />
 
-  <!-- Window Title -->
-  <text x="68" y="20" fill="#94a3b8" font-family="'Fira Code', monospace" font-size="11" font-weight="600">sparksidd@fleet-control: ~/robotics-workspace (ros2-humble / x86_64-linux)</text>
-  <text x="640" y="20" fill="#38bdf8" font-family="'Fira Code', monospace" font-size="10.5">UPTIME: 24/7/365</text>
+  <!-- Header Title -->
+  <text x="65" y="19" fill="#94a3b8" font-family="'Fira Code', monospace" font-size="11" font-weight="600">TERMINAL // sparksidd@edge-node-01: ~/robotics-workspace [x86_64 // ROS 2 Humble]</text>
+  <text x="630" y="19" fill="#38bdf8" font-family="'Fira Code', monospace" font-size="10.5">STATE: 0 DEADLOCKS</text>
 
   <!-- Terminal Content Area -->
-  <g font-family="'Fira Code', 'Courier New', monospace" font-size="11" line-height="1.5">
+  <g font-family="'Fira Code', 'Courier New', monospace" font-size="11">
     
     <!-- Command 1: systemctl status -->
-    <text x="20" y="56">
-      <tspan fill="#34d399" font-weight="700">sparksidd@fleet-control</tspan><tspan fill="#64748b">:</tspan><tspan fill="#38bdf8">~</tspan><tspan fill="#f1f5f9">$ systemctl status siddharth.service --no-pager</tspan>
+    <text x="20" y="54">
+      <tspan fill="#34d399" font-weight="700">sparksidd@edge-node-01</tspan><tspan fill="#64748b">:</tspan><tspan fill="#38bdf8">~</tspan><tspan fill="#f1f5f9">$ systemctl status siddharth.service --no-pager</tspan>
     </text>
 
     <!-- Service Title & Active Bullet -->
-    <text x="20" y="78">
+    <text x="20" y="75">
       <tspan fill="#10b981" font-weight="700" class="status-pulse">●</tspan>
       <tspan fill="#ffffff" font-weight="700"> siddharth.service</tspan>
       <tspan fill="#94a3b8"> - Autonomous Robotics &amp; Multi-Agent Systems Architect</tspan>
     </text>
 
     <!-- Service Details -->
-    <text x="36" y="98">
+    <text x="36" y="95">
       <tspan fill="#64748b">Loaded: </tspan>
       <tspan fill="#cbd5e1">loaded (/etc/systemd/system/siddharth.service; </tspan>
-      <tspan fill="#34d399">enabled</tspan>
-      <tspan fill="#cbd5e1">; vendor preset: enabled)</tspan>
+      <tspan fill="#34d399" font-weight="600">enabled</tspan>
+      <tspan fill="#cbd5e1">; preset: enabled)</tspan>
     </text>
 
-    <text x="36" y="118">
+    <text x="36" y="115">
       <tspan fill="#64748b">Active: </tspan>
       <tspan fill="#10b981" font-weight="700">active (running)</tspan>
       <tspan fill="#cbd5e1"> since Mon 2024-01-01 00:00:00 UTC (uptime: 24/7 autonomous loop)</tspan>
     </text>
 
-    <text x="36" y="138">
+    <text x="36" y="135">
       <tspan fill="#64748b">  Docs: </tspan>
       <tspan fill="#38bdf8">https://www.siddharth.buzz/</tspan>
       <tspan fill="#64748b"> | Contact: </tspan>
       <tspan fill="#cbd5e1">siddharth.sk324@gmail.com</tspan>
     </text>
 
-    <text x="36" y="158">
+    <text x="36" y="155">
       <tspan fill="#64748b"> Tasks: </tspan>
       <tspan fill="#f59e0b" font-weight="700">200 active AMRs</tspan>
       <tspan fill="#94a3b8"> (Space-Time A* + PIBT; </tspan>
       <tspan fill="#34d399" font-weight="700">0 collisions</tspan>
-      <tspan fill="#94a3b8">, 0 deadlocks across 200 runs)</tspan>
+      <tspan fill="#94a3b8"> across 200 runs)</tspan>
     </text>
 
-    <text x="36" y="178">
+    <text x="36" y="175">
       <tspan fill="#64748b">Memory: </tspan>
       <tspan fill="#cbd5e1">128.4M (Deterministic heap, Valgrind leak audit: 0 bytes)</tspan>
     </text>
 
-    <!-- CGroup Processes -->
-    <text x="36" y="198">
+    <!-- Process Tree -->
+    <text x="36" y="195">
       <tspan fill="#64748b">CGroup: </tspan>
       <tspan fill="#94a3b8">/system.slice/siddharth.service</tspan>
     </text>
 
-    <text x="36" y="216">
+    <text x="36" y="213">
       <tspan fill="#64748b">        ├─1337 </tspan>
       <tspan fill="#a78bfa">/usr/bin/engineer</tspan>
       <tspan fill="#94a3b8"> --fleet=decentralized --pathfinding=space-time-a-star</tspan>
     </text>
 
-    <text x="36" y="234">
+    <text x="36" y="231">
       <tspan fill="#64748b">        ├─1338 </tspan>
       <tspan fill="#a78bfa">/opt/ros/humble/bin/pibt_resolver</tspan>
       <tspan fill="#94a3b8"> --cycle-breaker=tarjan --timeout=1.4ms</tspan>
     </text>
 
-    <text x="36" y="252">
+    <text x="36" y="249">
       <tspan fill="#64748b">        └─1339 </tspan>
       <tspan fill="#a78bfa">/usr/bin/gcc_phat_engine</tspan>
       <tspan fill="#94a3b8"> --array=4mic-tetrahedral --rate=48kHz</tspan>
     </text>
 
-    <!-- Subtle divider line -->
-    <line x1="20" y1="268" x2="820" y2="268" stroke="#1e293b" stroke-dasharray="3,3" stroke-width="0.8" />
+    <!-- Divider Line -->
+    <line x1="20" y1="264" x2="820" y2="264" stroke="#1e293b" stroke-dasharray="3,3" stroke-width="0.8" />
 
-    <!-- Command 2: sparksidd benchmark -->
-    <text x="20" y="292">
-      <tspan fill="#34d399" font-weight="700">sparksidd@fleet-control</tspan><tspan fill="#64748b">:</tspan><tspan fill="#38bdf8">~</tspan><tspan fill="#f1f5f9">$ sparksidd --run-benchmark --target=amr-fleet --agents=200</tspan>
+    <!-- Command 2: benchmark execution -->
+    <text x="20" y="287">
+      <tspan fill="#34d399" font-weight="700">sparksidd@edge-node-01</tspan><tspan fill="#64748b">:</tspan><tspan fill="#38bdf8">~</tspan><tspan fill="#f1f5f9">$ sparksidd --run-benchmark --target=amr-fleet --agents=200</tspan>
     </text>
 
-    <!-- Benchmark Log Output -->
-    <text x="20" y="312">
-      <tspan fill="#38bdf8">[00.12s] Hungarian Algorithm:</tspan>
-      <tspan fill="#cbd5e1"> 200/200 tasks allocated with minimal Euclidean distance.</tspan>
+    <!-- Benchmark Log Lines -->
+    <text x="20" y="307">
+      <tspan fill="#38bdf8">[00.12s] Hungarian Allocation:</tspan>
+      <tspan fill="#cbd5e1"> 200/200 tasks assigned with minimal Euclidean cost matrix.</tspan>
     </text>
 
-    <text x="20" y="330">
-      <tspan fill="#f59e0b">[00.52s] PIBT Conflict Resolution:</tspan>
-      <tspan fill="#cbd5e1"> 34 crossings detected; Tarjan cycle-breaker passed in 1.4ms.</tspan>
+    <text x="20" y="325">
+      <tspan fill="#f59e0b">[00.52s] PIBT Conflict Resolver:</tspan>
+      <tspan fill="#cbd5e1"> 34 crossings detected; Tarjan cycle-breaker verified in 1.4ms.</tspan>
     </text>
 
-    <text x="20" y="348">
+    <text x="20" y="343">
       <tspan fill="#34d399" font-weight="700">[BENCHMARK RESULT]</tspan>
       <tspan fill="#ffffff" font-weight="700"> Collisions: 0 | Latency Saved: 24.89% | Status: 121/121 PASS</tspan>
     </text>
 
-    <!-- Command 3: Prompt with blinking cursor -->
-    <text x="20" y="364">
-      <tspan fill="#34d399" font-weight="700">sparksidd@fleet-control</tspan><tspan fill="#64748b">:</tspan><tspan fill="#38bdf8">~</tspan><tspan fill="#f1f5f9">$ </tspan>
+    <!-- Active Prompt with Cursor -->
+    <text x="20" y="361">
+      <tspan fill="#34d399" font-weight="700">sparksidd@edge-node-01</tspan><tspan fill="#64748b">:</tspan><tspan fill="#38bdf8">~</tspan><tspan fill="#f1f5f9">$ </tspan>
       <tspan fill="#38bdf8" class="cursor-blink">█</tspan>
     </text>
 

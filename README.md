@@ -13,10 +13,12 @@
 
 <br/><br/>
 
-[![Portfolio](https://img.shields.io/badge/🌐_Portfolio-siddharth.buzz-38BDF8?style=for-the-badge&logoColor=white)](https://www.siddharth.buzz/)
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-Siddharth_Kumar-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://linkedin.com)
-[![Email](https://img.shields.io/badge/Email-Direct_Contact-EA4335?style=for-the-badge&logo=gmail&logoColor=white)](mailto:siddharth.sk324@gmail.com)
-[![Status](https://img.shields.io/badge/Status-Compiles_Without_Errors-34D399?style=for-the-badge&logo=statuspage&logoColor=white)](https://github.com/SparkSidd)
+<p align="center">
+  <a href="https://www.siddharth.buzz/"><img src="https://img.shields.io/badge/PORTFOLIO-siddharth.buzz-38BDF8?style=flat-square&logo=googlechrome&logoColor=white" /></a>
+  <a href="https://linkedin.com"><img src="https://img.shields.io/badge/LINKEDIN-Siddharth_Kumar-0284C7?style=flat-square&logo=linkedin&logoColor=white" /></a>
+  <a href="mailto:siddharth.sk324@gmail.com"><img src="https://img.shields.io/badge/EMAIL-siddharth.sk324%40gmail.com-F59E0B?style=flat-square&logo=gmail&logoColor=white" /></a>
+  <a href="https://github.com/SparkSidd"><img src="https://img.shields.io/badge/STATUS-0_COLLISIONS_%2F_PASSING-10B981?style=flat-square&logo=statuspage&logoColor=white" /></a>
+</p>
 
 </div>
 
@@ -24,36 +26,133 @@
 
 ---
 
-### 📡 Real-Time Simulation & Signal Telemetry
-
-<div align="center">
-  <!-- 2D AMR Warehouse Coordination Radar -->
-  <img src="assets/simulation_radar.svg" width="100%" alt="AMR Fleet Coordination Radar" />
-  <p><sub><strong>Fig 1:</strong> Decentralized AMR Conflict Resolution — ROS 2 Nav2 global costmap inflation halos, differential-drive chassis kinematics, and Space-Time A* trajectory planning with dynamic PIBT yield token handover.</sub></p>
-
-  <br/>
-
-  <!-- Acoustic TDOA Spectrum Visualizer -->
-  <img src="assets/acoustic_spectrum.svg" width="100%" alt="EchoLocate Acoustic Spectrum" />
-  <p><sub><strong>Fig 2:</strong> EchoLocate Signal Pipeline — Dual-channel acoustic impulse response ($x_0(t)$ vs $x_1(t)$), GCC-PHAT cross-correlation Dirac peak ($\tau = +0.82\text{ms}$), and 4-microphone SRP-PHAT polar beamforming.</sub></p>
-</div>
-
----
-
-### 💻 Architecture & Systemd Daemon Status
+### 💻 01 // Node Architecture & Systemd Daemon
 
 <div align="center">
   <!-- Systemd Service & CLI Benchmark Terminal Window -->
   <img src="assets/terminal_system.svg" width="100%" alt="Systemd Service Telemetry & Terminal" />
-  <p><sub><strong>Fig 3:</strong> Active <code>systemd</code> daemon lifecycle (<code>siddharth.service</code>) and real-time PIBT multi-agent benchmark execution.</sub></p>
+  <p><sub><strong>System Telemetry:</strong> Active <code>systemd</code> daemon lifecycle (<code>siddharth.service</code>) and real-time PIBT multi-agent benchmark execution.</sub></p>
 </div>
 
 ---
 
-### 🕹️ Interactive Dilemma: The 02:00 AM Warehouse Deadlock
+### 📡 02 // Autonomous Flight Deck & Telemetry Cockpit
+
+<div align="center">
+  <table border="0" width="100%" style="border-collapse: collapse;">
+    <tr>
+      <td width="50%" align="center" valign="top">
+        <img src="assets/simulation_radar.svg" width="100%" alt="AMR Warehouse Coordination Radar" />
+        <br/>
+        <sub><strong>AMR FLEET COORDINATION</strong> — Space-Time A* + PIBT dynamic deconfliction</sub>
+      </td>
+      <td width="50%" align="center" valign="top">
+        <img src="assets/acoustic_spectrum.svg" width="100%" alt="EchoLocate Acoustic Spectrum" />
+        <br/>
+        <sub><strong>ECHOLOCATE PIPELINE</strong> — GCC-PHAT TDOA &amp; 4-mic SRP polar beamforming</sub>
+      </td>
+    </tr>
+  </table>
+</div>
+
+---
+
+### 🚀 03 // Flagship Systems That Actually Run
+
+<table>
+  <tr>
+    <td width="50%" valign="top">
+      <h4>🤖 <a href="https://github.com/SparkSidd/SIH-26">AMR-Fleet-Coordination</a></h4>
+      <p>Decentralized edge-native AMR warehouse coordination (BEL challenge). Solves multi-agent path conflicts using Space-Time A*, PIBT token negotiation, and Hungarian task allocation.</p>
+      <p><em>The Reality:</em> 0 collisions across 200 simulation runs. If two robots ever try to occupy the same grid cell, Tarjan's cycle-breaker aggressively intervenes before hardware gets bent.</p>
+      <p>
+        <img src="https://img.shields.io/badge/Collisions-0%20(Hardware_Intact)-38BDF8?style=flat-square" />
+        <img src="https://img.shields.io/badge/Latency%20Saved-24.89%25-F59E0B?style=flat-square" />
+        <img src="https://img.shields.io/badge/Tests-121%2F121%20PASS-34D399?style=flat-square" />
+      </p>
+      <p>
+        <a href="https://sih-26-in4c.onrender.com"><b>▶ Launch Live Digital Twin</b></a> • 
+        <a href="https://github.com/SparkSidd/SIH-26"><b>Inspect Codebase</b></a>
+      </p>
+    </td>
+    <td width="50%" valign="top">
+      <h4>📡 <a href="https://github.com/SparkSidd/EchoLocate">EchoLocate</a></h4>
+      <p>Research-grade acoustic source localization framework evaluating 3,150 environmental simulation permutations across 4 microphone array geometries.</p>
+      <p><em>The Reality:</em> Who needs GPS indoors when you can calculate GCC-PHAT TDOA and solve Non-Linear Least Squares multilateration while questioning room reverberation physics.</p>
+      <p>
+        <img src="https://img.shields.io/badge/Simulations-3%2C150%20Grid_Runs-A855F7?style=flat-square" />
+        <img src="https://img.shields.io/badge/Resolution-%C2%B11.2%C2%B0%20Spatial-38BDF8?style=flat-square" />
+        <img src="https://img.shields.io/badge/Tests-39%20PASS-34D399?style=flat-square" />
+      </p>
+      <p>
+        <a href="https://github.com/SparkSidd/EchoLocate"><b>▶ Inspect TDOA Pipeline</b></a>
+      </p>
+    </td>
+  </tr>
+  <tr>
+    <td width="50%" valign="top">
+      <h4>🛡️ <a href="https://github.com/SparkSidd/ChainShield">ChainShield</a></h4>
+      <p>Multi-layer supply chain resilience optimization platform utilizing discrete-event simulation and MIP optimization.</p>
+      <p><em>The Reality:</em> Formulated in Pyomo and solved with HiGHS so supply chain bottlenecks are detected before shipping carriers lose your parcel.</p>
+      <p>
+        <img src="https://img.shields.io/badge/Solver-HiGHS%20%7C%20Pyomo-38BDF8?style=flat-square" />
+        <img src="https://img.shields.io/badge/Engine-SimPy-34D399?style=flat-square" />
+        <img src="https://img.shields.io/badge/API-FastAPI-009688?style=flat-square" />
+      </p>
+      <p>
+        <a href="https://github.com/SparkSidd/ChainShield"><b>▶ View MIP Formulations</b></a>
+      </p>
+    </td>
+    <td width="50%" valign="top">
+      <h4>🥗 <a href="https://github.com/SparkSidd/IngredientInsightAI">IngredientInsightAI</a></h4>
+      <p>Intent-first nutritional intelligence co-pilot built for EnCode 2026 @ IIT Guwahati with multi-tiered LLM reasoning.</p>
+      <p><em>The Reality:</em> Translates cryptic chemical preservative numbers into plain English warnings so you know why eating ultra-processed chips at 3 AM is suboptimal.</p>
+      <p>
+        <img src="https://img.shields.io/badge/Hackathon-EnCode%202026-A855F7?style=flat-square" />
+        <img src="https://img.shields.io/badge/Frontend-Next.js%2014-38BDF8?style=flat-square" />
+        <img src="https://img.shields.io/badge/LLM-Gemini%20API-4285F4?style=flat-square" />
+      </p>
+      <p>
+        <a href="https://github.com/SparkSidd/IngredientInsightAI"><b>▶ View EnCode '26 Repo</b></a>
+      </p>
+    </td>
+  </tr>
+  <tr>
+    <td width="50%" valign="top">
+      <h4>🧠 <a href="https://github.com/SparkSidd/MindBridge">MindBridge</a></h4>
+      <p>Full-stack mental health support platform with crisis risk detection, DistilBERT sentiment extraction, and Gemini reasoning.</p>
+      <p><em>The Reality:</em> Analyzing conversational tokens and stress indicators with sub-second inference latency, fully containerized in Docker so dependency issues can't induce existential dread.</p>
+      <p>
+        <img src="https://img.shields.io/badge/NLP-DistilBERT-FF6F00?style=flat-square" />
+        <img src="https://img.shields.io/badge/Deploy-Docker%20%7C%20Nginx-38BDF8?style=flat-square" />
+        <img src="https://img.shields.io/badge/Backend-FastAPI-009688?style=flat-square" />
+      </p>
+      <p>
+        <a href="https://github.com/SparkSidd/MindBridge"><b>▶ View NLP Architecture</b></a>
+      </p>
+    </td>
+    <td width="50%" valign="top">
+      <h4>⚡ <a href="https://github.com/SparkSidd/WebPerfAI">WebPerfAI</a></h4>
+      <p>Full-stack web performance auditing suite integrating Google PageSpeed Insights API, JWT security, and automated Core Web Vitals telemetry.</p>
+      <p><em>The Reality:</em> Because waiting 4.8 seconds for a JavaScript bundle to hydrate an animated button is a human rights violation.</p>
+      <p>
+        <img src="https://img.shields.io/badge/Telemetry-PageSpeed%20API-4285F4?style=flat-square" />
+        <img src="https://img.shields.io/badge/Stack-React%20%7C%20Node-34D399?style=flat-square" />
+        <img src="https://img.shields.io/badge/Auth-JWT%20Tokens-F59E0B?style=flat-square" />
+      </p>
+      <p>
+        <a href="https://github.com/SparkSidd/WebPerfAI"><b>▶ Audit Telemetry Docs</b></a>
+      </p>
+    </td>
+  </tr>
+</table>
+
+---
+
+### 🕹️ 04 // Interactive Systems Lab & Edge Diagnostics
 
 <details>
-  <summary><b>▶ Start Scenario: Two AMRs meet head-to-head in Aisle 4. The BEL challenge demo is in 5 minutes. What do you do?</b></summary>
+  <summary><b>▶ [Scenario Simulation] The 02:00 AM Warehouse Deadlock (Two AMRs meet head-to-head in Aisle 4)</b></summary>
   <br/>
 
   <details>
@@ -87,101 +186,6 @@
   </details>
 
 </details>
-
----
-
-### 🚀 Projects That Actually Run
-
-<table>
-  <tr>
-    <td width="50%" valign="top">
-      <h4>🤖 <a href="https://github.com/SparkSidd/SIH-26">AMR-Fleet-Coordination</a></h4>
-      <p>Decentralized edge-native AMR warehouse coordination (BEL challenge). Solves multi-agent path conflicts using Space-Time A*, PIBT token negotiation, and Hungarian task allocation.</p>
-      <p><em>The Reality:</em> 0 collisions across 200 runs. If two robots ever try to occupy the same grid cell, Tarjan's cycle-breaker aggressively intervenes before hardware gets bent.</p>
-      <p>
-        <img src="https://img.shields.io/badge/Collisions-0%20(Hardware_Intact)-38BDF8?style=flat-square" />
-        <img src="https://img.shields.io/badge/Latency%20Saved-24.89%25-F59E0B?style=flat-square" />
-        <img src="https://img.shields.io/badge/Tests-121%2F121%20PASS-34D399?style=flat-square" />
-      </p>
-      <p>
-        <a href="https://sih-26-in4c.onrender.com"><b>▶ Launch Live Digital Twin</b></a> • 
-        <a href="https://github.com/SparkSidd/SIH-26"><b>Inspect Codebase</b></a>
-      </p>
-    </td>
-    <td width="50%" valign="top">
-      <h4>📡 <a href="https://github.com/SparkSidd/EchoLocate">EchoLocate</a></h4>
-      <p>Research-grade acoustic source localization framework evaluating 3,150 environmental simulation permutations across 4 microphone array geometries.</p>
-      <p><em>The Reality:</em> Who needs GPS indoors when you can calculate GCC-PHAT TDOA and solve Non-Linear Least Squares multilateration while questioning room reverberation physics.</p>
-      <p>
-        <img src="https://img.shields.io/badge/Simulations-3%2C150%20Grid_Runs-A855F7?style=flat-square" />
-        <img src="https://img.shields.io/badge/Tests-39%20PASS-34D399?style=flat-square" />
-        <img src="https://img.shields.io/badge/Engine-PyRoomAcoustics-38BDF8?style=flat-square" />
-      </p>
-      <p>
-        <a href="https://github.com/SparkSidd/EchoLocate"><b>▶ Inspect TDOA Pipeline</b></a>
-      </p>
-    </td>
-  </tr>
-  <tr>
-    <td width="50%" valign="top">
-      <h4>🛡️ <a href="https://github.com/SparkSidd/ChainShield">ChainShield</a></h4>
-      <p>Multi-layer supply chain resilience optimization platform utilizing discrete-event simulation and MIP optimization.</p>
-      <p><em>The Reality:</em> Formulated in Pyomo and solved with HiGHS so supply chain bottlenecks are detected before shipping carriers lose your parcel.</p>
-      <p>
-        <img src="https://img.shields.io/badge/Solver-HiGHS%20%7C%20Pyomo-38BDF8?style=flat-square" />
-        <img src="https://img.shields.io/badge/Engine-SimPy-34D399?style=flat-square" />
-        <img src="https://img.shields.io/badge/API-FastAPI-009688?style=flat-square" />
-      </p>
-      <p>
-        <a href="https://github.com/SparkSidd/ChainShield"><b>▶ View MIP Formulations</b></a>
-      </p>
-    </td>
-    <td width="50%" valign="top">
-      <h4>🥗 <a href="https://github.com/SparkSidd/IngredientInsightAI">IngredientInsightAI</a></h4>
-      <p>Intent-first nutritional intelligence co-pilot built for EnCode 2026 @ IIT Guwahati with multi-tiered LLM reasoning.</p>
-      <p><em>The Reality:</em> Translates cryptic chemical preservative numbers into plain English warnings so you know why eating ultra-processed chips at 3 AM is suboptimal.</p>
-      <p>
-        <img src="https://img.shields.io/badge/Hackathon-EnCode%202026-A855F7?style=flat-square" />
-        <img src="https://img.shields.io/badge/Frontend-Next.js%2014-000000?style=flat-square" />
-        <img src="https://img.shields.io/badge/LLM-Gemini%20API-4285F4?style=flat-square" />
-      </p>
-      <p>
-        <a href="https://github.com/SparkSidd/IngredientInsightAI"><b>▶ View EnCode '26 Repo</b></a>
-      </p>
-    </td>
-  </tr>
-  <tr>
-    <td width="50%" valign="top">
-      <h4>🧠 <a href="https://github.com/SparkSidd/MindBridge">MindBridge</a></h4>
-      <p>Full-stack mental health support platform with crisis risk detection, DistilBERT sentiment extraction, and Gemini reasoning.</p>
-      <p><em>The Reality:</em> Analyzing conversational tokens and stress indicators with sub-second inference latency, fully containerized in Docker so dependency issues can't induce existential dread.</p>
-      <p>
-        <img src="https://img.shields.io/badge/NLP-DistilBERT-FF6F00?style=flat-square" />
-        <img src="https://img.shields.io/badge/Deploy-Docker%20%7C%20Nginx-2496ED?style=flat-square" />
-        <img src="https://img.shields.io/badge/Backend-FastAPI-009688?style=flat-square" />
-      </p>
-      <p>
-        <a href="https://github.com/SparkSidd/MindBridge"><b>▶ View NLP Architecture</b></a>
-      </p>
-    </td>
-    <td width="50%" valign="top">
-      <h4>⚡ <a href="https://github.com/SparkSidd/WebPerfAI">WebPerfAI</a></h4>
-      <p>Full-stack web performance auditing suite integrating Google PageSpeed Insights API, JWT security, and automated Core Web Vitals telemetry.</p>
-      <p><em>The Reality:</em> Because waiting 4.8 seconds for a JavaScript bundle to hydrate an animated button is a human rights violation.</p>
-      <p>
-        <img src="https://img.shields.io/badge/Telemetry-PageSpeed%20API-4285F4?style=flat-square" />
-        <img src="https://img.shields.io/badge/Stack-React%20%7C%20Node-34D399?style=flat-square" />
-      </p>
-      <p>
-        <a href="https://github.com/SparkSidd/WebPerfAI"><b>▶ Audit Telemetry Docs</b></a>
-      </p>
-    </td>
-  </tr>
-</table>
-
----
-
-### 🕹️ Interactive System Diagnostics (Click to Expand)
 
 <details>
   <summary><b>📊 [Empirical Benchmarks] Centralized Greedy vs. Decentralized PIBT &amp; Space-Time A*</b></summary>
@@ -224,7 +228,7 @@
 
 ---
 
-### 🛠️ Honest Tech Stack Opinions
+### 🛠️ 05 // Tech Stack & Engineering Truths
 
 <div align="center">
 
@@ -244,7 +248,7 @@
 
 ---
 
-### 📊 Live Telemetry & Verified Evidence
+### 📊 06 // Activity Telemetry & Commit Log
 
 <div align="center">
   <!-- TokyoNight Streak Stats Card -->
@@ -264,5 +268,5 @@
 ---
 
 <div align="center">
-  <sub>Formulated with mathematical rigor &amp; questionable sleep schedules by <strong>Siddharth Kumar</strong>. Open for high-impact research, robotics, and distributed systems roles.</sub>
+  <sub>Formulated with mathematical rigor &amp; questionable sleep schedules by <strong>Siddharth Kumar</strong>. Open for high-impact autonomous robotics, research, and distributed systems roles.</sub>
 </div>
