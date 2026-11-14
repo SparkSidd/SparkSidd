@@ -1,85 +1,52 @@
 <div align="center">
 
-<!-- Animated Header Wave/Typing SVG -->
-<a href="https://github.com/SparkSidd">
-  <img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=2,12,24,35&height=220&section=header&text=Siddharth%20Kumar&fontSize=52&fontAlignY=36&animation=fadeIn&fontColor=ffffff&desc=Systems%20Engineer%20%7C%20Multi-Agent%20Architect%20%7C%20Full-Stack%20Developer&descAlignY=62&descSize=19" width="100%" alt="Header" />
+<!-- Custom Bespoke Animated Hero Banner -->
+<a href="https://www.siddharth.buzz/">
+  <img src="assets/banner.svg" width="100%" alt="Siddharth Kumar - Systems & Multi-Agent Architect" />
 </a>
 
-<!-- Animated Typing SVG -->
-<p align="center">
-  <a href="https://github.com/SparkSidd">
-    <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=20&duration=3000&pause=1000&color=60A5FA&center=true&vCenter=true&random=false&width=700&lines=Building+Decentralized+AMR+Fleet+Coordination;Researching+Indoor+Acoustic+Source+Localization;Developing+AI-Native+Intelligence+Co-Pilots;Engineering+Resilient+Distributed+Systems" alt="Typing SVG" />
-  </a>
-</p>
+<br/><br/>
 
-<!-- Live Profile Counter Badge -->
+<!-- Interactive Quick Links & Status -->
 <p align="center">
-  <a href="https://github.com/SparkSidd">
-    <img src="https://komarev.com/ghpvc/?username=SparkSidd&color=7928CA&style=for-the-badge&label=%F0%9F%91%81%EF%B8%8F+PROFILE+VIEWS" alt="Profile Views" />
-  </a>
+  <a href="https://www.siddharth.buzz/"><img src="https://img.shields.io/badge/🌐_Live_Portfolio-siddharth.buzz-38BDF8?style=for-the-badge&logoColor=white" /></a>
+  <a href="https://linkedin.com"><img src="https://img.shields.io/badge/LinkedIn-Siddharth_Kumar-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" /></a>
+  <a href="mailto:siddharth.sk324@gmail.com"><img src="https://img.shields.io/badge/Email-Direct_Contact-EA4335?style=for-the-badge&logo=gmail&logoColor=white" /></a>
+  <a href="https://github.com/SparkSidd"><img src="https://komarev.com/ghpvc/?username=SparkSidd&color=38BDF8&style=for-the-badge&label=👁️+PROFILE+VIEWS" /></a>
 </p>
-
-<p align="center">
-  <a href="https://linkedin.com"><img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" /></a>
-  <a href="https://www.siddharth.buzz/"><img src="https://img.shields.io/badge/Live_Portfolio-2563EB?style=for-the-badge&logo=google-chrome&logoColor=white" /></a>
-  <a href="mailto:siddharth.sk324@gmail.com"><img src="https://img.shields.io/badge/Email-EA4335?style=for-the-badge&logo=gmail&logoColor=white" /></a>
-</p>
-
-<img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4300-a447-11eb-908a-139a6edaec5c.gif" width="100%" />
 
 </div>
 
-## 📌 Executive Summary
-
-I architect and engineer **distributed multi-agent systems, acoustic signal processing pipelines, and AI-native web platforms**. My focus is on building deterministic, mathematically sound software backed by empirical simulation benchmarks.
-
-- 🤖 **Multi-Robot Fleet Coordination**: Engineered an edge-native AMR coordination framework solving the SIH'26 / BEL smart warehouse challenge, reducing task latency by **24.89%** with **0 inter-robot collisions** across 200 simulation executions.
-- 🚀 **EnCode 2026 @ IIT Guwahati**: Built **IngredientInsightAI**, an intent-first nutrition co-pilot using multi-tiered LLM reasoning and calibrated uncertainty.
-- 🔬 **Signal & Systems Engineering**: Authored **EchoLocate**, an acoustic source localization framework evaluating 3,150 environmental simulation permutations.
-
 ---
 
-## 🛠️ Engineering Tech Matrix
+### 💻 System Telemetry & Architecture Specification
 
 <div align="center">
-
-| Domain | Core Stack & Frameworks |
-| :--- | :--- |
-| **Robotics & Simulation** | ROS 2, Gazebo Harmonic, Webots R2023b, PyRoomAcoustics, SimPy |
-| **Optimization & Graph Theory** | Pyomo, HiGHS Solver, NetworkX, Hungarian Matching, PIBT, Space-Time A* |
-| **AI, ML & NLP Pipelines** | PyTorch, HuggingFace Transformers, DistilBERT, Gemini API, VADER, scikit-learn |
-| **Full-Stack & Distributed API**| FastAPI (Async), React 18, Next.js 14, Node.js / Express, TypeScript, Vite |
-| **Databases & DevOps** | PostgreSQL, MongoDB, SQLite, Docker, Docker Compose, Nginx, Git, Linux |
-
+  <img src="assets/terminal.svg" width="100%" alt="Telemetry Spec Terminal" />
 </div>
-
-<br/>
-
-<p align="center">
-  <img src="https://skillicons.dev/icons?i=python,ts,react,nextjs,fastapi,nodejs,postgres,mongodb,docker,git,linux,tailwind" alt="Skills" />
-</p>
 
 ---
 
-## 🚀 Highlighted Flagship Projects
+### 🚀 Highlighted Flagship Engineering Projects
 
 <table width="100%">
   <tr>
     <td width="50%" valign="top">
       <h3>🤖 <a href="https://github.com/SparkSidd/SIH-26">AMR-Fleet-Coordination</a></h3>
-      <p>Decentralized AMR fleet coordination for smart warehouses (BEL challenge). Features Hungarian task allocation, Space-Time A*, PIBT negotiation, and Tarjan cycle-breaking.</p>
+      <p>Decentralized edge-native AMR fleet coordination for smart warehouses (BEL challenge). Features Hungarian task allocation, Space-Time A*, PIBT negotiation, and Tarjan cycle-breaking.</p>
       <p>
-        <img src="https://img.shields.io/badge/Tests-121%2F121%20PASS-brightgreen?style=flat-square" />
-        <img src="https://img.shields.io/badge/Collisions-0-blue?style=flat-square" />
-        <img src="https://img.shields.io/badge/Time%20Saved-24.89%25-orange?style=flat-square" />
+        <img src="https://img.shields.io/badge/Tests-121%2F121%20PASS-34D399?style=flat-square" />
+        <img src="https://img.shields.io/badge/Collisions-0%20(200%20Runs)-38BDF8?style=flat-square" />
+        <img src="https://img.shields.io/badge/Latency%20Saved-24.89%25-F59E0B?style=flat-square" />
       </p>
     </td>
     <td width="50%" valign="top">
       <h3>📡 <a href="https://github.com/SparkSidd/EchoLocate">EchoLocate</a></h3>
       <p>Research-grade acoustic source localization framework evaluating 3,150 grid runs across 4 microphone geometries with GCC-PHAT TDOA and NLS multilateration.</p>
       <p>
-        <img src="https://img.shields.io/badge/Evaluations-3%2C150-purple?style=flat-square" />
-        <img src="https://img.shields.io/badge/Tests-39%20Unit%20Tests-brightgreen?style=flat-square" />
+        <img src="https://img.shields.io/badge/Simulations-3%2C150%20Runs-A855F7?style=flat-square" />
+        <img src="https://img.shields.io/badge/Tests-39%20PASS-34D399?style=flat-square" />
+        <img src="https://img.shields.io/badge/Engine-PyRoomAcoustics-38BDF8?style=flat-square" />
       </p>
     </td>
   </tr>
@@ -88,33 +55,37 @@ I architect and engineer **distributed multi-agent systems, acoustic signal proc
       <h3>🛡️ <a href="https://github.com/SparkSidd/ChainShield">ChainShield</a></h3>
       <p>Multi-layer supply chain resilience optimization platform utilizing discrete-event simulation, MIP optimization (HiGHS), and cascade vulnerability mapping.</p>
       <p>
-        <img src="https://img.shields.io/badge/Stack-FastAPI%20%7C%20Pyomo-blue?style=flat-square" />
-        <img src="https://img.shields.io/badge/Engine-SimPy-green?style=flat-square" />
+        <img src="https://img.shields.io/badge/Solver-HiGHS%20%7C%20Pyomo-38BDF8?style=flat-square" />
+        <img src="https://img.shields.io/badge/Engine-SimPy-34D399?style=flat-square" />
+        <img src="https://img.shields.io/badge/API-FastAPI%20Async-009688?style=flat-square" />
       </p>
     </td>
     <td width="50%" valign="top">
-      <h3>🧠 <a href="https://github.com/SparkSidd/MindBridge">MindBridge</a></h3>
-      <p>Full-stack mental health support platform with crisis risk detection, DistilBERT + VADER sentiment analysis, and Gemini LLM reasoning.</p>
+      <h3>🥗 <a href="https://github.com/SparkSidd/IngredientInsightAI">IngredientInsightAI</a></h3>
+      <p>AI-native nutritional co-pilot built for EnCode 2026 @ IIT Guwahati. Replaces passive data tables with dynamic intent inference and uncertainty calibration.</p>
       <p>
-        <img src="https://img.shields.io/badge/Deploy-Docker%20%7C%20Nginx-blue?style=flat-square" />
-        <img src="https://img.shields.io/badge/AI-DistilBERT%20%7C%20Gemini-red?style=flat-square" />
+        <img src="https://img.shields.io/badge/Hackathon-EnCode%202026-A855F7?style=flat-square" />
+        <img src="https://img.shields.io/badge/Frontend-Next.js%2014-000000?style=flat-square" />
+        <img src="https://img.shields.io/badge/LLM-Gemini%20API-4285F4?style=flat-square" />
       </p>
     </td>
   </tr>
   <tr>
     <td width="50%" valign="top">
-      <h3>🥗 <a href="https://github.com/SparkSidd/IngredientInsightAI">IngredientInsightAI</a></h3>
-      <p>AI-native nutritional co-pilot built for EnCode 2026 @ IIT Guwahati. Replaces passive data tables with dynamic intent inference and uncertainty calibration.</p>
+      <h3>🧠 <a href="https://github.com/SparkSidd/MindBridge">MindBridge</a></h3>
+      <p>Full-stack mental health support platform with crisis risk detection, DistilBERT + VADER sentiment analysis, and Gemini LLM reasoning.</p>
       <p>
-        <img src="https://img.shields.io/badge/Hackathon-EnCode%202026-blueviolet?style=flat-square" />
-        <img src="https://img.shields.io/badge/Frontend-Next.js%2014-black?style=flat-square" />
+        <img src="https://img.shields.io/badge/NLP-DistilBERT-FF6F00?style=flat-square" />
+        <img src="https://img.shields.io/badge/Deploy-Docker%20%7C%20Nginx-2496ED?style=flat-square" />
+        <img src="https://img.shields.io/badge/Backend-FastAPI-009688?style=flat-square" />
       </p>
     </td>
     <td width="50%" valign="top">
       <h3>⚡ <a href="https://github.com/SparkSidd/WebPerfAI">WebPerfAI</a></h3>
       <p>Full-stack web performance auditing suite integrating Google PageSpeed Insights API, JWT security, and automated Core Web Vitals telemetry.</p>
       <p>
-        <img src="https://img.shields.io/badge/Stack-React%20%7C%20Node%20%7C%20Mongo-green?style=flat-square" />
+        <img src="https://img.shields.io/badge/Telemetry-PageSpeed%20API-4285F4?style=flat-square" />
+        <img src="https://img.shields.io/badge/Stack-React%20%7C%20Node-34D399?style=flat-square" />
       </p>
     </td>
   </tr>
@@ -122,31 +93,51 @@ I architect and engineer **distributed multi-agent systems, acoustic signal proc
 
 ---
 
-## 📊 Live GitHub Activity & Analytics
+### 🛠️ Core Engineering Stack
 
 <div align="center">
-  <img src="https://streak-stats.demolab.com/?user=SparkSidd&theme=tokyonight&hide_border=true&v=20261114220431" />
+
+| Domain | Core Frameworks, Libraries & Tooling |
+| :--- | :--- |
+| **Robotics & Spatial Computing** | `ROS 2`, `Gazebo Harmonic`, `Webots R2023b`, `PyRoomAcoustics`, `SimPy` |
+| **Algorithms & Mathematical Optimization** | `Pyomo`, `HiGHS Solver`, `NetworkX`, `Hungarian Matching`, `Space-Time A*`, `PIBT` |
+| **AI, Neural Models & Signal Processing** | `PyTorch`, `HuggingFace Transformers`, `DistilBERT`, `Gemini API`, `scikit-learn`, `NumPy`, `SciPy` |
+| **Distributed Systems & Full-Stack** | `FastAPI (Async)`, `React 18`, `Next.js 14`, `TypeScript`, `Node.js`, `Vite`, `Tailwind CSS` |
+| **Data Architecture & Infrastructure** | `PostgreSQL`, `MongoDB`, `SQLite`, `Docker`, `Docker Compose`, `Nginx`, `Linux`, `Git` |
+
+<br/>
+
+<p align="center">
+  <img src="https://skillicons.dev/icons?i=python,ts,react,nextjs,fastapi,nodejs,postgres,mongodb,docker,git,linux,tailwind" alt="Skills" />
+</p>
+
+</div>
+
+---
+
+### 📊 Live Activity & Analytics Radar
+
+<div align="center">
+  <!-- TokyoNight Streak Stats Card -->
+  <img src="https://streak-stats.demolab.com/?user=SparkSidd&theme=tokyonight&hide_border=true&border_radius=12" />
 </div>
 
 <br/>
 
 <!-- Animated Contribution Snake Eating Contribution Grid -->
 <div align="center">
-  <h3>🐍 Contribution Snake Activity</h3>
   <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/SparkSidd/SparkSidd/output/github-contribution-grid-snake-dark.svg?v=20261114220431">
-    <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/SparkSidd/SparkSidd/output/github-contribution-grid-snake.svg?v=20261114220431">
-    <img alt="github contribution grid snake" src="https://raw.githubusercontent.com/SparkSidd/SparkSidd/output/github-contribution-grid-snake-dark.svg?v=20261114220431" width="90%">
+    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/SparkSidd/SparkSidd/output/github-contribution-grid-snake-dark.svg">
+    <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/SparkSidd/SparkSidd/output/github-contribution-grid-snake.svg">
+    <img alt="github contribution grid snake" src="https://raw.githubusercontent.com/SparkSidd/SparkSidd/output/github-contribution-grid-snake-dark.svg" width="90%">
   </picture>
 </div>
 
-<br/>
+---
 
 <div align="center">
-  <img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=2,12,24,35&height=100&section=footer" width="100%" />
+  <p><sub>Engineered with mathematical rigor &amp; empirical benchmarks by <strong>Siddharth Kumar</strong>. Open for high-impact research, robotics, and distributed systems collaborations.</sub></p>
+  <a href="https://www.siddharth.buzz/">
+    <img src="https://img.shields.io/badge/EXPLORE_PORTFOLIO-siddharth.buzz-38BDF8?style=for-the-badge&logo=google-chrome&logoColor=white" />
+  </a>
 </div>
-
-<div align="center">
-  <sub>Engineered with precision by <strong>Siddharth Kumar</strong>. Open for high-impact research, engineering roles, and collaborative systems.</sub>
-</div>
-<!-- updated at 2026-11-13 05:25:45 -->
