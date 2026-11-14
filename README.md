@@ -24,11 +24,18 @@
 
 ---
 
-### 📡 Live Multi-Agent Simulation Telemetry
+### 📡 Real-Time Simulation & Signal Telemetry
 
 <div align="center">
-  <img src="assets/simulation_radar.svg" width="100%" alt="AMR Coordination Radar" />
-  <p><sub>Real-time 2D simulation radar tracking decentralized AMR conflict resolution &amp; space-time trajectory allocation.</sub></p>
+  <!-- 2D AMR Warehouse Coordination Radar -->
+  <img src="assets/simulation_radar.svg" width="100%" alt="AMR Fleet Coordination Radar" />
+  <p><sub><strong>Fig 1:</strong> Decentralized AMR Conflict Resolution — 2D space-time grid trajectory planning with dynamic waypoint beacons.</sub></p>
+
+  <br/>
+
+  <!-- Acoustic TDOA Spectrum Visualizer -->
+  <img src="assets/acoustic_spectrum.svg" width="100%" alt="EchoLocate Acoustic Spectrum" />
+  <p><sub><strong>Fig 2:</strong> EchoLocate Signal Pipeline — Real-time GCC-PHAT FFT frequency bins with 4-channel polar angle multilateration.</sub></p>
 </div>
 
 ---
@@ -61,6 +68,101 @@ TaskLatencySaved=24.89% (over centralized greedy dispatch)
 AcousticPermutations=3150 (evaluated without destroying room acoustics)
 TestSuiteStatus=121/121 PASS (miraculously)
 ```
+
+---
+
+### 💻 Interactive CLI Simulator (Click to Execute Commands)
+
+<details>
+  <summary><code>$ sparksidd --status</code></summary>
+  <br/>
+
+```json
+{
+  "engineer": "Siddharth Kumar",
+  "kernel": "Linux 6.x (Sikkim, India)",
+  "uptime": "24/7 autonomous loop",
+  "active_daemons": [
+    "pibt_token_manager (RUNNING)",
+    "gcc_phat_multilateration_engine (RUNNING)",
+    "caffeine_synthesizer (CRITICAL_LEVEL)"
+  ],
+  "collision_count": 0,
+  "compilation_status": "0 errors, 0 warnings"
+}
+```
+
+</details>
+
+<details>
+  <summary><code>$ sparksidd --run-benchmark --target=amr-fleet --agents=200</code></summary>
+  <br/>
+
+```bash
+[INIT] Spawning 200 decentralized mobile robots on 50x50 warehouse grid...
+[00.12s] Hungarian Algorithm: 200/200 tasks allocated with minimal Euclidean distance.
+[00.34s] Space-Time A*: 4D reservation tables generated. Time horizon = 120s.
+[00.48s] PIBT Conflict Resolution: 34 potential bottleneck crossings detected.
+[00.51s] Cycle Check: Tarjan algorithm identified 2 cyclical dependencies.
+[00.52s] RESOLVED: Priority tokens swapped in 1.4ms. Zero deadlock cycles remaining.
+[BENCHMARK RESULT] Collisions: 0 | Latency Reduction: 24.89% | Status: 121/121 PASS
+```
+
+</details>
+
+<details>
+  <summary><code>$ sparksidd --hire</code></summary>
+  <br/>
+
+```bash
+[QUERY] Checking availability for Systems & Robotics Engineering roles...
+[RESULT] STATUS: OPEN FOR OFFERS & RESEARCH COLLABORATIONS.
+[CONTACT] Direct email: siddharth.sk324@gmail.com
+[PORTFOLIO] Live projects & deep dives: https://www.siddharth.buzz/
+[RESUME] Available immediately upon request.
+```
+
+</details>
+
+---
+
+### 🕹️ Interactive Dilemma: The 02:00 AM Warehouse Deadlock
+
+<details>
+  <summary><b>▶ Start Scenario: Two AMRs meet head-to-head in Aisle 4. The BEL challenge demo is in 5 minutes. What do you do?</b></summary>
+  <br/>
+
+  <details>
+    <summary><b>[Choice A] Slam the centralized Emergency Stop button</b></summary>
+    <br/>
+    <blockquote>
+      ❌ <strong>Outcome:</strong> Every robot in the facility freezes. The warehouse manager gasps. The safety supervisor raises an eyebrow. Task latency drops to zero because tasks are no longer finishing.
+      <br/><br/>
+      <em>Verdict: -500 engineering aura. Try again.</em>
+    </blockquote>
+  </details>
+
+  <details>
+    <summary><b>[Choice B] Trigger PIBT priority inheritance &amp; Tarjan cycle-breaking</b></summary>
+    <br/>
+    <blockquote>
+      ✅ <strong>Outcome:</strong> In 1.2ms, Robot #3 calculates that Robot #7 carries higher task priority. Robot #3 backs smoothly into a designated grid pocket, clears the aisle, and yields the right-of-way. Both robots proceed without a scratch.
+      <br/><br/>
+      <em>Verdict: +10,000 aura. The demo passes with 0 collisions and a 24.89% latency saving. This is why SIH'26 uses decentralized coordination.</em>
+    </blockquote>
+  </details>
+
+  <details>
+    <summary><b>[Choice C] Blame packet loss and Wi-Fi latency</b></summary>
+    <br/>
+    <blockquote>
+      🤷 <strong>Outcome:</strong> The classic systems move. The reviewers nod knowingly because enterprise Wi-Fi is notorious. But since the system runs on a peer-to-peer decentralized mesh with zero central reliance, the excuse fails under cross-examination.
+      <br/><br/>
+      <em>Verdict: Reverting to Choice B is strongly advised.</em>
+    </blockquote>
+  </details>
+
+</details>
 
 ---
 
