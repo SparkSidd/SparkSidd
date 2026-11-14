@@ -1,53 +1,78 @@
 <div align="center">
 
-# ⚡ Siddharth Kumar
-
-### Systems &amp; Multi-Agent Robotics Engineer
-**Autonomous Fleet Coordination • Acoustic Signal Processing • Mathematical Optimization**
-
-<br/>
-
-<a href="https://github.com/SparkSidd">
-  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=16&duration=3000&pause=1000&color=38BDF8&center=true&vCenter=true&width=620&lines=Building+Decentralized+AMR+Fleet+Coordination;Researching+Indoor+Acoustic+Source+Localization;Engineering+Resilient+Distributed+Systems;Architecting+AI-Native+Intelligence+Co-Pilots" alt="Typing SVG" />
+<!-- Cinematic Architectural Banner -->
+<a href="https://www.siddharth.buzz/">
+  <img src="assets/banner.svg" width="100%" alt="Siddharth Kumar - Systems & Multi-Agent Robotics Engineer" />
 </a>
 
 <br/><br/>
 
-[![Portfolio](https://img.shields.io/badge/🌐_Live_Portfolio-siddharth.buzz-38BDF8?style=for-the-badge&logoColor=white)](https://www.siddharth.buzz/)
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-Siddharth_Kumar-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://linkedin.com)
-[![Email](https://img.shields.io/badge/Email-Direct_Contact-EA4335?style=for-the-badge&logo=gmail&logoColor=white)](mailto:siddharth.sk324@gmail.com)
-[![Location](https://img.shields.io/badge/Location-Sikkim%2C_India-1E293B?style=for-the-badge&logo=google-maps&logoColor=red)](https://github.com/SparkSidd)
+<!-- Interactive Quick Links -->
+<p align="center">
+  <a href="https://www.siddharth.buzz/"><img src="https://img.shields.io/badge/🌐_Live_Portfolio-siddharth.buzz-38BDF8?style=for-the-badge&logoColor=white" /></a>
+  <a href="https://linkedin.com"><img src="https://img.shields.io/badge/LinkedIn-Siddharth_Kumar-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" /></a>
+  <a href="mailto:siddharth.sk324@gmail.com"><img src="https://img.shields.io/badge/Email-Direct_Contact-EA4335?style=for-the-badge&logo=gmail&logoColor=white" /></a>
+  <a href="https://github.com/SparkSidd"><img src="https://komarev.com/ghpvc/?username=SparkSidd&color=38BDF8&style=for-the-badge&label=👁️+PROFILE+VIEWS" /></a>
+</p>
+
+<!-- Animated Monospace Ticker -->
+<p align="center">
+  <a href="https://github.com/SparkSidd">
+    <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=16&duration=3000&pause=1000&color=38BDF8&center=true&vCenter=true&width=620&lines=Building+Decentralized+AMR+Fleet+Coordination;Researching+Indoor+Acoustic+Source+Localization;Engineering+Resilient+Distributed+Systems;Architecting+AI-Native+Intelligence+Co-Pilots" alt="Typing SVG" />
+  </a>
+</p>
 
 </div>
 
-<br/>
+---
+
+### 🔬 Research Domains & Engineering Pillars
+
+<table>
+  <tr>
+    <td width="33%" valign="top">
+      <h4>🤖 Autonomous Fleet Robotics</h4>
+      <p>Decentralized edge AMR coordination, Space-Time A* multi-robot pathfinding, priority inheritance token negotiation (PIBT), and Hungarian task allocation across Gazebo Harmonic and Webots.</p>
+    </td>
+    <td width="33%" valign="top">
+      <h4>📡 Signal Processing &amp; Acoustics</h4>
+      <p>Acoustic source localization evaluating 3,150 environmental simulation permutations. GCC-PHAT TDOA estimation, Non-Linear Least Squares (NLS) multilateration, and spatial room acoustics.</p>
+    </td>
+    <td width="33%" valign="top">
+      <h4>🛡️ Mathematical Optimization</h4>
+      <p>Mixed-Integer Linear Programming (MILP) formulated in Pyomo with HiGHS solver, discrete-event network resilience simulation in SimPy, and Tarjan cycle-breaking graph algorithms.</p>
+    </td>
+  </tr>
+</table>
 
 ---
 
-### 🔭 Core Engineering Focus
+### 💻 Developer Specification
 
 ```typescript
-const profile = {
-  identity: "Siddharth Kumar",
-  specialization: "Autonomous Robotics & Distributed Systems",
-  research: [
-    "Decentralized AMR Fleet Coordination (PIBT, Space-Time A*, Hungarian Task Allocation)",
-    "Acoustic Source Localization (GCC-PHAT TDOA, NLS Multilateration, Room Acoustics)",
-    "Resilience Engineering (Discrete-Event Simulation, Mixed-Integer Linear Programming)"
+const engineer = {
+  name: "Siddharth Kumar",
+  role: "Systems & Multi-Agent Robotics Engineer",
+  location: "Sikkim, India",
+  domains: [
+    "Decentralized AMR Fleet Coordination",
+    "Acoustic Source Localization & Signal Processing",
+    "Mathematical Optimization & Discrete-Event Simulation"
   ],
   flagshipMetrics: {
-    fleetCollisions: 0,              // 200 simulation executions
+    fleetCollisions: 0,              // 0 inter-robot collisions across 200 runs
     fleetLatencyReduction: "24.89%", // benchmarked against centralized greedy dispatch
-    acousticSimulations: 3150,       // across 4 microphone geometries
+    acousticSimulations: 3150,       // across 4 microphone array geometries
     testSuiteStatus: "121/121 PASS"
   },
+  status: "Open for high-impact research, robotics, and distributed systems roles",
   portfolio: "https://www.siddharth.buzz/"
 };
 ```
 
 ---
 
-### 🚀 Highlighted Flagship Projects
+### 🚀 Highlighted Flagship Engineering Projects
 
 <table>
   <tr>
@@ -132,7 +157,7 @@ const profile = {
 
 ---
 
-### 📊 Live Activity & Telemetry
+### 📊 Live Activity & Engineering Telemetry
 
 <div align="center">
   <!-- TokyoNight Streak Stats Card -->
