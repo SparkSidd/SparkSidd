@@ -1,131 +1,240 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 740 190" width="100%" height="190">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 840 260" width="100%" height="260">
   <defs>
-    <!-- Background Gradient -->
-    <linearGradient id="gridBg" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#060911" />
-      <stop offset="100%" stop-color="#0b1120" />
+    <!-- Viewport Background Gradient -->
+    <linearGradient id="rvizBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#050811" />
+      <stop offset="50%" stop-color="#0a0f1d" />
+      <stop offset="100%" stop-color="#04060d" />
     </linearGradient>
 
-    <!-- Radar Sweep Gradient -->
-    <linearGradient id="sweepGrad" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#38bdf8" stop-opacity="0" />
-      <stop offset="80%" stop-color="#38bdf8" stop-opacity="0.15" />
-      <stop offset="100%" stop-color="#38bdf8" stop-opacity="0.4" />
+    <!-- LiDAR Laser Arc Gradient -->
+    <radialGradient id="lidarScan" cx="0%" cy="0%" r="100%">
+      <stop offset="0%" stop-color="#38bdf8" stop-opacity="0.45" />
+      <stop offset="65%" stop-color="#38bdf8" stop-opacity="0.12" />
+      <stop offset="100%" stop-color="#38bdf8" stop-opacity="0" />
+    </radialGradient>
+
+    <!-- Nav2 Costmap Inflation Halos -->
+    <radialGradient id="inflationLethal" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#ef4444" stop-opacity="0.8" />
+      <stop offset="35%" stop-color="#f59e0b" stop-opacity="0.35" />
+      <stop offset="70%" stop-color="#3b82f6" stop-opacity="0.15" />
+      <stop offset="100%" stop-color="#3b82f6" stop-opacity="0" />
+    </radialGradient>
+
+    <!-- Animated Path Dash Patterns -->
+    <linearGradient id="pathCyanGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#38bdf8" stop-opacity="0.3" />
+      <stop offset="50%" stop-color="#38bdf8" stop-opacity="1" />
+      <stop offset="100%" stop-color="#0284c7" stop-opacity="0.4" />
+    </linearGradient>
+
+    <linearGradient id="pathAmberGrad" x1="100%" y1="0%" x2="0%" y2="0%">
+      <stop offset="0%" stop-color="#f59e0b" stop-opacity="0.3" />
+      <stop offset="50%" stop-color="#f59e0b" stop-opacity="1" />
+      <stop offset="100%" stop-color="#d97706" stop-opacity="0.4" />
     </linearGradient>
 
     <style>
-      @keyframes radarSweep {
-        0% { transform: translateX(-150px); }
-        100% { transform: translateX(760px); }
+      @keyframes lidarSweep {
+        0% { transform: rotate(0deg); }
+        100% { transform: rotate(360deg); }
       }
-      @keyframes robot1Move {
-        0% { transform: translate(120px, 60px); }
-        50% { transform: translate(280px, 60px); }
-        100% { transform: translate(120px, 60px); }
+      @keyframes amr1Kinematics {
+        0%   { transform: translate(110px, 85px) rotate(0deg); }
+        30%  { transform: translate(320px, 85px) rotate(8deg); }
+        45%  { transform: translate(420px, 115px) rotate(35deg); }
+        68%  { transform: translate(580px, 165px) rotate(15deg); }
+        78%  { transform: translate(710px, 165px) rotate(0deg); }
+        86%  { transform: translate(580px, 165px) rotate(-165deg); }
+        94%  { transform: translate(380px, 105px) rotate(-155deg); }
+        100% { transform: translate(110px, 85px) rotate(-180deg); }
       }
-      @keyframes robot2Move {
-        0% { transform: translate(450px, 120px); }
-        50% { transform: translate(310px, 120px); }
-        100% { transform: translate(450px, 120px); }
+      @keyframes amr2Kinematics {
+        0%   { transform: translate(720px, 175px) rotate(-180deg); }
+        28%  { transform: translate(530px, 175px) rotate(-175deg); }
+        40%  { transform: translate(450px, 175px) rotate(-150deg); } /* Yielding slowdown */
+        52%  { transform: translate(360px, 145px) rotate(-140deg); }
+        72%  { transform: translate(220px, 85px) rotate(-175deg); }
+        82%  { transform: translate(120px, 85px) rotate(-180deg); }
+        90%  { transform: translate(340px, 135px) rotate(25deg); }
+        100% { transform: translate(720px, 175px) rotate(0deg); }
       }
-      @keyframes robot3Move {
-        0% { transform: translate(200px, 140px); }
-        50% { transform: translate(200px, 45px); }
-        100% { transform: translate(200px, 140px); }
+      @keyframes trajectoryFlow {
+        from { stroke-dashoffset: 40; }
+        to { stroke-dashoffset: 0; }
       }
-      @keyframes beaconPulse {
-        0%, 100% { r: 4px; opacity: 1; }
-        50% { r: 10px; opacity: 0.2; }
+      @keyframes radarPing {
+        0% { r: 4px; opacity: 1; }
+        50% { opacity: 0.6; }
+        100% { r: 18px; opacity: 0; }
       }
-      @keyframes blinkCursor {
-        0%, 49% { opacity: 1; }
-        50%, 100% { opacity: 0; }
+      @keyframes alertBlink {
+        0%, 100% { opacity: 0.95; }
+        50% { opacity: 0.35; }
       }
-      .sweep-beam { animation: radarSweep 6s linear infinite; }
-      .amr1 { animation: robot1Move 7s ease-in-out infinite; }
-      .amr2 { animation: robot2Move 8s ease-in-out infinite; }
-      .amr3 { animation: robot3Move 6.5s ease-in-out infinite; }
-      .beacon { animation: beaconPulse 2s ease-out infinite; }
-      .cur { animation: blinkCursor 1s infinite; }
+
+      .lidar-beam { animation: lidarSweep 3.6s linear infinite; transform-origin: 0px 0px; }
+      .amr-cyan { animation: amr1Kinematics 15s cubic-bezier(0.4, 0, 0.2, 1) infinite; }
+      .amr-amber { animation: amr2Kinematics 15s cubic-bezier(0.4, 0, 0.2, 1) infinite; }
+      .flow-cyan { animation: trajectoryFlow 1.6s linear infinite; }
+      .flow-amber { animation: trajectoryFlow 1.6s linear infinite; }
+      .ping-ring { animation: radarPing 2.4s cubic-bezier(0, 0, 0.2, 1) infinite; }
+      .alert-tag { animation: alertBlink 1.8s ease-in-out infinite; }
     </style>
   </defs>
 
   <!-- Container Frame -->
-  <rect x="1" y="1" width="738" height="188" rx="12" fill="url(#gridBg)" stroke="#1e293b" stroke-width="1.2" />
+  <rect x="1" y="1" width="838" height="258" rx="12" fill="url(#rvizBg)" stroke="#1e293b" stroke-width="1.5" />
 
-  <!-- Top Simulation Header Bar -->
-  <path d="M 1 12 Q 1 1 12 1 L 728 1 Q 739 1 739 12 L 739 30 L 1 30 Z" fill="#0f172a" fill-opacity="0.8" />
-  <line x1="1" y1="30" x2="739" y2="30" stroke="#1e293b" stroke-width="1" />
+  <!-- RViz2 Header HUD -->
+  <path d="M 1 12 Q 1 1 12 1 L 828 1 Q 839 1 839 12 L 839 30 L 1 30 Z" fill="#0b1120" />
+  <line x1="1" y1="30" x2="839" y2="30" stroke="#1e293b" stroke-width="1" />
 
-  <!-- Status indicator -->
-  <circle cx="16" cy="15" r="4" fill="#34d399" />
-  <text x="28" y="19" fill="#94a3b8" font-family="'Fira Code', monospace" font-size="11" font-weight="600">AMR_COORDINATION_KERNEL // ACTIVE SIMULATION MAP</text>
-  <text x="530" y="19" fill="#38bdf8" font-family="'Fira Code', monospace" font-size="10.5">COLLISION_RISK: 0.00%</text>
+  <!-- Window Dots -->
+  <circle cx="16" cy="15" r="4" fill="#ef4444" />
+  <circle cx="30" cy="15" r="4" fill="#f59e0b" />
+  <circle cx="44" cy="15" r="4" fill="#10b981" />
 
-  <!-- Background Warehouse Grid -->
-  <g stroke="#1e293b" stroke-opacity="0.4" stroke-width="0.8" stroke-dasharray="2,2">
-    <!-- Horizontal Grid Lines -->
-    <line x1="20" y1="50" x2="720" y2="50" />
-    <line x1="20" y1="75" x2="720" y2="75" />
-    <line x1="20" y1="100" x2="720" y2="100" />
-    <line x1="20" y1="125" x2="720" y2="125" />
-    <line x1="20" y1="150" x2="720" y2="150" />
+  <!-- ROS 2 RViz Navigation Telemetry Title -->
+  <text x="65" y="19" fill="#94a3b8" font-family="'Fira Code', 'Courier New', monospace" font-size="11" font-weight="600">RVIZ2 // /amr_fleet/nav2_costmap [Space-Time A* + PIBT Engine v2.4]</text>
+  <text x="635" y="19" fill="#38bdf8" font-family="'Fira Code', 'Courier New', monospace" font-size="10.5">TOPIC: /tf (20.0 Hz // RELIABLE)</text>
 
-    <!-- Vertical Grid Lines -->
-    <line x1="60" y1="35" x2="60" y2="165" />
-    <line x1="140" y1="35" x2="140" y2="165" />
-    <line x1="220" y1="35" x2="220" y2="165" />
-    <line x1="300" y1="35" x2="300" y2="165" />
-    <line x1="380" y1="35" x2="380" y2="165" />
-    <line x1="460" y1="35" x2="460" y2="165" />
-    <line x1="540" y1="35" x2="540" y2="165" />
-    <line x1="620" y1="35" x2="620" y2="165" />
-    <line x1="700" y1="35" x2="700" y2="165" />
+  <!-- 2D Metric Coordinate Grid & Origin Axes -->
+  <g stroke="#1e293b" stroke-opacity="0.5" stroke-width="0.8">
+    <line x1="20" y1="65" x2="820" y2="65" stroke-dasharray="3,3" />
+    <line x1="20" y1="105" x2="820" y2="105" stroke-dasharray="3,3" />
+    <line x1="20" y1="145" x2="820" y2="145" stroke-dasharray="3,3" />
+    <line x1="20" y1="185" x2="820" y2="185" stroke-dasharray="3,3" />
+    <line x1="20" y1="225" x2="820" y2="225" stroke-dasharray="3,3" />
+
+    <line x1="80" y1="30" x2="80" y2="230" stroke-dasharray="3,3" />
+    <line x1="180" y1="30" x2="180" y2="230" stroke-dasharray="3,3" />
+    <line x1="280" y1="30" x2="280" y2="230" stroke-dasharray="3,3" />
+    <line x1="380" y1="30" x2="380" y2="230" stroke-dasharray="3,3" />
+    <line x1="480" y1="30" x2="480" y2="230" stroke-dasharray="3,3" />
+    <line x1="580" y1="30" x2="580" y2="230" stroke-dasharray="3,3" />
+    <line x1="680" y1="30" x2="680" y2="230" stroke-dasharray="3,3" />
+    <line x1="780" y1="30" x2="780" y2="230" stroke-dasharray="3,3" />
   </g>
 
-  <!-- Stationary Obstacles (Warehouse Racks) -->
-  <rect x="70" y="85" width="40" height="20" rx="3" fill="#1e293b" stroke="#334155" stroke-width="0.8" />
-  <rect x="390" y="85" width="40" height="20" rx="3" fill="#1e293b" stroke="#334155" stroke-width="0.8" />
-  <rect x="550" y="60" width="40" height="20" rx="3" fill="#1e293b" stroke="#334155" stroke-width="0.8" />
+  <!-- Metric Ruler Coordinates -->
+  <text x="75" y="44" fill="#475569" font-family="'Fira Code', monospace" font-size="9">-15.0m</text>
+  <text x="275" y="44" fill="#475569" font-family="'Fira Code', monospace" font-size="9">-7.5m</text>
+  <text x="470" y="44" fill="#475569" font-family="'Fira Code', monospace" font-size="9">X=0.0m [ORIGIN]</text>
+  <text x="675" y="44" fill="#475569" font-family="'Fira Code', monospace" font-size="9">+7.5m</text>
+  <text x="775" y="44" fill="#475569" font-family="'Fira Code', monospace" font-size="9">+15.0m</text>
 
-  <!-- Target Waypoint Beacons -->
-  <circle cx="280" cy="60" r="4" fill="#a855f7" />
-  <circle cx="280" cy="60" r="4" fill="none" stroke="#a855f7" stroke-width="1.5" class="beacon" />
-  <text x="290" y="64" fill="#c084fc" font-family="'Fira Code', monospace" font-size="9.5">WP_A</text>
-
-  <circle cx="310" cy="120" r="4" fill="#38bdf8" />
-  <circle cx="310" cy="120" r="4" fill="none" stroke="#38bdf8" stroke-width="1.5" class="beacon" />
-  <text x="320" y="124" fill="#7dd3fc" font-family="'Fira Code', monospace" font-size="9.5">WP_B</text>
-
-  <!-- Radar Scan Beam -->
-  <rect x="0" y="31" width="120" height="135" fill="url(#sweepGrad)" class="sweep-beam" />
-
-  <!-- Animated Robots -->
-  <!-- Robot #1 (Cyan) -->
-  <g class="amr1">
-    <rect x="-10" y="-8" width="20" height="16" rx="4" fill="#0284c7" stroke="#38bdf8" stroke-width="1.2" />
-    <circle cx="0" cy="0" r="3" fill="#ffffff" />
-    <text x="-16" y="-12" fill="#38bdf8" font-family="'Fira Code', monospace" font-size="9" font-weight="700">AMR#1</text>
+  <!-- Origin Trihedron (ROS standard: X=Red, Y=Green) -->
+  <g transform="translate(480, 145)">
+    <line x1="0" y1="0" x2="22" y2="0" stroke="#ef4444" stroke-width="2" />
+    <polygon points="22,0 17,-3 17,3" fill="#ef4444" />
+    <line x1="0" y1="0" x2="0" y2="-22" stroke="#22c55e" stroke-width="2" />
+    <polygon points="0,-22 -3,-17 3,-17" fill="#22c55e" />
+    <circle cx="0" cy="0" r="2.5" fill="#38bdf8" />
+    <text x="25" y="4" fill="#ef4444" font-family="'Fira Code', monospace" font-size="8" font-weight="700">X</text>
+    <text x="-4" y="-25" fill="#22c55e" font-family="'Fira Code', monospace" font-size="8" font-weight="700">Y</text>
   </g>
 
-  <!-- Robot #2 (Emerald) -->
-  <g class="amr2">
-    <rect x="-10" y="-8" width="20" height="16" rx="4" fill="#059669" stroke="#34d399" stroke-width="1.2" />
-    <circle cx="0" cy="0" r="3" fill="#ffffff" />
-    <text x="-16" y="24" fill="#34d399" font-family="'Fira Code', monospace" font-size="9" font-weight="700">AMR#2</text>
+  <!-- Nav2 Static Costmap Inflation Zones (Warehouse Shelving Racks) -->
+  <!-- Obstacle Zone 1: RACK_ALPHA -->
+  <g transform="translate(260, 145)">
+    <!-- Circumscribed Inflation Decay Halo -->
+    <circle cx="0" cy="0" r="42" fill="url(#inflationLethal)" />
+    <!-- Inscribed Safety Contour -->
+    <rect x="-24" y="-18" width="48" height="36" rx="4" fill="none" stroke="#f59e0b" stroke-width="1" stroke-dasharray="2,2" />
+    <!-- Lethal Obstacle Footprint -->
+    <rect x="-18" y="-12" width="36" height="24" rx="3" fill="#090d16" stroke="#ef4444" stroke-width="1.4" />
+    <text x="-16" y="3" fill="#fca5a5" font-family="'Fira Code', monospace" font-size="8" font-weight="700">RACK_01</text>
+    <text x="-21" y="27" fill="#64748b" font-family="'Fira Code', monospace" font-size="7">COST: 254 (LETHAL)</text>
   </g>
 
-  <!-- Robot #3 (Amber) -->
-  <g class="amr3">
-    <rect x="-10" y="-8" width="20" height="16" rx="4" fill="#d97706" stroke="#fbbf24" stroke-width="1.2" />
-    <circle cx="0" cy="0" r="3" fill="#ffffff" />
-    <text x="14" y="4" fill="#fbbf24" font-family="'Fira Code', monospace" font-size="9" font-weight="700">AMR#3</text>
+  <!-- Obstacle Zone 2: RACK_BETA -->
+  <g transform="translate(580, 95)">
+    <circle cx="0" cy="0" r="42" fill="url(#inflationLethal)" />
+    <rect x="-24" y="-18" width="48" height="36" rx="4" fill="none" stroke="#f59e0b" stroke-width="1" stroke-dasharray="2,2" />
+    <rect x="-18" y="-12" width="36" height="24" rx="3" fill="#090d16" stroke="#ef4444" stroke-width="1.4" />
+    <text x="-16" y="3" fill="#fca5a5" font-family="'Fira Code', monospace" font-size="8" font-weight="700">RACK_02</text>
+    <text x="-21" y="27" fill="#64748b" font-family="'Fira Code', monospace" font-size="7">COST: 254 (LETHAL)</text>
   </g>
 
-  <!-- Bottom Telemetry HUD Line -->
-  <path d="M 1 168 L 739 168" stroke="#1e293b" stroke-width="1" />
-  <text x="16" y="181" fill="#64748b" font-family="'Fira Code', monospace" font-size="10">PIBT_TOKEN: PASSING</text>
-  <text x="210" y="181" fill="#64748b" font-family="'Fira Code', monospace" font-size="10">SPACE_TIME_A*: OPTIMAL</text>
-  <text x="430" y="181" fill="#64748b" font-family="'Fira Code', monospace" font-size="10">DEADLOCKS_DETECTED: 0</text>
-  <text x="630" y="181" fill="#22c55e" font-family="'Fira Code', monospace" font-size="10" font-weight="700">STATUS: LIVE</text>
+  <!-- Space-Time A* Global Plan Paths (Smooth Splines) -->
+  <!-- AMR_01 Path (Cyan) -->
+  <path d="M 110 85 C 240 85, 300 85, 380 105 C 440 120, 500 165, 580 165 L 720 165" 
+        fill="none" stroke="url(#pathCyanGrad)" stroke-width="2.5" stroke-dasharray="6,4" class="flow-cyan" />
+  
+  <!-- AMR_02 Path (Amber) with Dynamic PIBT Evasion Arc -->
+  <path d="M 720 175 C 600 175, 520 175, 450 170 C 400 165, 360 145, 310 115 C 260 85, 180 85, 110 85" 
+        fill="none" stroke="url(#pathAmberGrad)" stroke-width="2.5" stroke-dasharray="6,4" class="flow-amber" />
+
+  <!-- Critical Deconfliction Point Marker -->
+  <g transform="translate(420, 138)">
+    <circle cx="0" cy="0" r="14" fill="none" stroke="#10b981" stroke-width="1" stroke-dasharray="3,3" />
+    <circle cx="0" cy="0" r="4" fill="#10b981" />
+    <rect x="-65" y="-28" width="130" height="16" rx="3" fill="#064e3b" fill-opacity="0.85" stroke="#10b981" stroke-width="0.8" class="alert-tag" />
+    <text x="-58" y="-17" fill="#a7f3d0" font-family="'Fira Code', monospace" font-size="7.5" font-weight="700">PIBT: TOKEN_YIELD (Δt=1.4s)</text>
+  </g>
+
+  <!-- Waypoint Goal Beacons -->
+  <!-- Goal 1 (For AMR_01) -->
+  <g transform="translate(720, 165)">
+    <circle cx="0" cy="0" r="4" fill="#38bdf8" />
+    <circle cx="0" cy="0" r="5" fill="none" stroke="#38bdf8" stroke-width="1.5" class="ping-ring" />
+    <text x="10" y="4" fill="#38bdf8" font-family="'Fira Code', monospace" font-size="9" font-weight="700">STATION_B [PICK]</text>
+  </g>
+
+  <!-- Goal 2 (For AMR_02) -->
+  <g transform="translate(110, 85)">
+    <circle cx="0" cy="0" r="4" fill="#f59e0b" />
+    <circle cx="0" cy="0" r="5" fill="none" stroke="#f59e0b" stroke-width="1.5" class="ping-ring" />
+    <text x="-88" y="4" fill="#f59e0b" font-family="'Fira Code', monospace" font-size="9" font-weight="700">STATION_A [DROP]</text>
+  </g>
+
+  <!-- Mobile Robot 1 (Cyan AMR with 360° LiDAR) -->
+  <g class="amr-cyan">
+    <!-- Physical Robot Chassis Footprint (0.65m x 0.45m scaled) -->
+    <rect x="-16" y="-12" width="32" height="24" rx="4" fill="#0369a1" stroke="#38bdf8" stroke-width="1.5" />
+    <!-- Drive Wheels -->
+    <rect x="-12" y="-14" width="8" height="3" rx="1" fill="#0f172a" stroke="#38bdf8" stroke-width="0.5" />
+    <rect x="4" y="-14" width="8" height="3" rx="1" fill="#0f172a" stroke="#38bdf8" stroke-width="0.5" />
+    <rect x="-12" y="11" width="8" height="3" rx="1" fill="#0f172a" stroke="#38bdf8" stroke-width="0.5" />
+    <rect x="4" y="11" width="8" height="3" rx="1" fill="#0f172a" stroke="#38bdf8" stroke-width="0.5" />
+    <!-- Heading Vector Arrow -->
+    <polygon points="12,0 4,-5 4,5" fill="#ffffff" />
+    <!-- Center LiDAR Puck (RPLiDAR A2 / S1) -->
+    <circle cx="0" cy="0" r="3.5" fill="#38bdf8" stroke="#ffffff" stroke-width="0.8" />
+    
+    <!-- Rotating LiDAR Sweep Cone -->
+    <g class="lidar-beam">
+      <path d="M 0 0 L 52 -22 A 56 56 0 0 1 52 22 Z" fill="url(#lidarScan)" />
+      <line x1="0" y1="0" x2="56" y2="0" stroke="#38bdf8" stroke-opacity="0.9" stroke-width="1.2" />
+      <circle cx="48" cy="12" r="1.5" fill="#38bdf8" />
+      <circle cx="54" cy="-8" r="1.5" fill="#38bdf8" />
+    </g>
+
+    <!-- Telemetry Tag -->
+    <text x="-24" y="-17" fill="#38bdf8" font-family="'Fira Code', monospace" font-size="8.5" font-weight="700">AMR_01 [PRIO:HIGH]</text>
+  </g>
+
+  <!-- Mobile Robot 2 (Amber AMR) -->
+  <g class="amr-amber">
+    <rect x="-16" y="-12" width="32" height="24" rx="4" fill="#b45309" stroke="#f59e0b" stroke-width="1.5" />
+    <rect x="-12" y="-14" width="8" height="3" rx="1" fill="#0f172a" stroke="#f59e0b" stroke-width="0.5" />
+    <rect x="4" y="-14" width="8" height="3" rx="1" fill="#0f172a" stroke="#f59e0b" stroke-width="0.5" />
+    <rect x="-12" y="11" width="8" height="3" rx="1" fill="#0f172a" stroke="#f59e0b" stroke-width="0.5" />
+    <rect x="4" y="11" width="8" height="3" rx="1" fill="#0f172a" stroke="#f59e0b" stroke-width="0.5" />
+    <polygon points="12,0 4,-5 4,5" fill="#ffffff" />
+    <circle cx="0" cy="0" r="3.5" fill="#f59e0b" stroke="#ffffff" stroke-width="0.8" />
+
+    <text x="-24" y="24" fill="#f59e0b" font-family="'Fira Code', monospace" font-size="8.5" font-weight="700">AMR_02 [PIBT:YIELD]</text>
+  </g>
+
+  <!-- Bottom Telemetry HUD Bar (Realistic ROS 2 Nodes & Diagnostics) -->
+  <path d="M 1 234 L 839 234" stroke="#1e293b" stroke-width="1" />
+  <rect x="1" y="235" width="838" height="24" fill="#060913" fill-opacity="0.95" />
+
+  <text x="16" y="250" fill="#64748b" font-family="'Fira Code', monospace" font-size="9.5">FRAME: /map → /odom → /base_link</text>
+  <text x="250" y="250" fill="#38bdf8" font-family="'Fira Code', monospace" font-size="9.5">SOLVER: Space-Time A* (3.4ms)</text>
+  <text x="475" y="250" fill="#34d399" font-family="'Fira Code', monospace" font-size="9.5">MIN SEPARATION: 1.64m (&gt; 0.90m req)</text>
+  <text x="715" y="250" fill="#22c55e" font-family="'Fira Code', monospace" font-size="9.5" font-weight="700">DEADLOCKS: 0 // PASS</text>
 </svg>

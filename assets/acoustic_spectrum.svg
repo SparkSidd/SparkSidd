@@ -1,100 +1,268 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 740 160" width="100%" height="160">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 840 260" width="100%" height="260">
   <defs>
-    <linearGradient id="eqGrad" x1="0%" y1="100%" x2="0%" y2="0%">
-      <stop offset="0%" stop-color="#38bdf8" />
-      <stop offset="60%" stop-color="#818cf8" />
-      <stop offset="100%" stop-color="#c084fc" />
+    <!-- Background Gradient -->
+    <linearGradient id="scopeBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#050811" />
+      <stop offset="50%" stop-color="#090d1a" />
+      <stop offset="100%" stop-color="#04060d" />
     </linearGradient>
-    <linearGradient id="waveBg" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#060911" />
-      <stop offset="100%" stop-color="#0b1120" />
+
+    <!-- GCC-PHAT Correlation Fill Gradient -->
+    <linearGradient id="phatGlow" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#38bdf8" stop-opacity="0.5" />
+      <stop offset="50%" stop-color="#818cf8" stop-opacity="0.2" />
+      <stop offset="100%" stop-color="#38bdf8" stop-opacity="0.0" />
+    </linearGradient>
+
+    <!-- SRP Polar Beamforming Lobe Gradient -->
+    <radialGradient id="beamLobe" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#f43f5e" stop-opacity="0.85" />
+      <stop offset="40%" stop-color="#fb7185" stop-opacity="0.4" />
+      <stop offset="80%" stop-color="#fda4af" stop-opacity="0.1" />
+      <stop offset="100%" stop-color="#f43f5e" stop-opacity="0" />
+    </radialGradient>
+
+    <!-- Waveform Gradients -->
+    <linearGradient id="waveRefGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#38bdf8" stop-opacity="0.4" />
+      <stop offset="50%" stop-color="#38bdf8" stop-opacity="1" />
+      <stop offset="100%" stop-color="#0284c7" stop-opacity="0.4" />
+    </linearGradient>
+
+    <linearGradient id="waveDelayedGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#c084fc" stop-opacity="0.4" />
+      <stop offset="50%" stop-color="#c084fc" stop-opacity="1" />
+      <stop offset="100%" stop-color="#9333ea" stop-opacity="0.4" />
     </linearGradient>
 
     <style>
-      @keyframes eqPulse1 { 0%, 100% { height: 24px; y: 96px; } 50% { height: 75px; y: 45px; } }
-      @keyframes eqPulse2 { 0%, 100% { height: 60px; y: 60px; } 50% { height: 20px; y: 100px; } }
-      @keyframes eqPulse3 { 0%, 100% { height: 40px; y: 80px; } 50% { height: 85px; y: 35px; } }
-      @keyframes eqPulse4 { 0%, 100% { height: 80px; y: 40px; } 50% { height: 35px; y: 85px; } }
-      @keyframes eqPulse5 { 0%, 100% { height: 30px; y: 90px; } 50% { height: 68px; y: 52px; } }
-      @keyframes pingRadar { 0% { r: 6px; opacity: 1; } 100% { r: 24px; opacity: 0; } }
+      @keyframes waveScroll {
+        0% { stroke-dashoffset: 0; }
+        100% { stroke-dashoffset: -120; }
+      }
+      @keyframes peakPulse {
+        0%, 100% { r: 4px; opacity: 1; }
+        50% { r: 12px; opacity: 0.2; }
+      }
+      @keyframes beamRotate {
+        0%, 100% { transform: rotate(42.8deg); }
+        50% { transform: rotate(44.2deg); }
+      }
+      @keyframes sourcePing {
+        0% { r: 3.5px; opacity: 1; }
+        100% { r: 16px; opacity: 0; }
+      }
+      @keyframes jitterSignal {
+        0% { transform: translateY(0px); }
+        25% { transform: translateY(-0.8px); }
+        50% { transform: translateY(0.5px); }
+        75% { transform: translateY(-0.4px); }
+        100% { transform: translateY(0px); }
+      }
 
-      .b1 { animation: eqPulse1 1.2s ease-in-out infinite; }
-      .b2 { animation: eqPulse2 1.5s ease-in-out infinite; }
-      .b3 { animation: eqPulse3 1.1s ease-in-out infinite; }
-      .b4 { animation: eqPulse4 1.7s ease-in-out infinite; }
-      .b5 { animation: eqPulse5 1.3s ease-in-out infinite; }
-      .ping-wave { animation: pingRadar 2.5s cubic-bezier(0, 0, 0.2, 1) infinite; }
+      .wave-live-0 { animation: waveScroll 4s linear infinite; }
+      .wave-live-1 { animation: waveScroll 4s linear infinite; }
+      .peak-ring { animation: peakPulse 2s cubic-bezier(0, 0, 0.2, 1) infinite; }
+      .source-wave { animation: sourcePing 2.2s cubic-bezier(0, 0, 0.2, 1) infinite; }
+      .beam-steer { animation: beamRotate 5s ease-in-out infinite; transform-origin: 0px 0px; }
+      .noise-jitter { animation: jitterSignal 0.4s steps(2) infinite; }
     </style>
   </defs>
 
-  <!-- Frame -->
-  <rect x="1" y="1" width="738" height="158" rx="12" fill="url(#waveBg)" stroke="#1e293b" stroke-width="1.2" />
+  <!-- Container Frame -->
+  <rect x="1" y="1" width="838" height="258" rx="12" fill="url(#scopeBg)" stroke="#1e293b" stroke-width="1.5" />
 
-  <!-- Title bar -->
-  <path d="M 1 12 Q 1 1 12 1 L 728 1 Q 739 1 739 12 L 739 28 L 1 28 Z" fill="#0f172a" fill-opacity="0.8" />
-  <line x1="1" y1="28" x2="739" y2="28" stroke="#1e293b" stroke-width="1" />
-  <circle cx="16" cy="14" r="4" fill="#a855f7" />
-  <text x="28" y="18" fill="#94a3b8" font-family="'Fira Code', monospace" font-size="11" font-weight="600">ECHOLOCATE // REAL-TIME GCC-PHAT ACOUSTIC SPECTRUM &amp; TDOA ANGLE</text>
-  <text x="545" y="18" fill="#34d399" font-family="'Fira Code', monospace" font-size="10.5">SOURCE: θ = 42.8° (CONFIDENCE: 98.4%)</text>
+  <!-- Scope Top Header HUD -->
+  <path d="M 1 12 Q 1 1 12 1 L 828 1 Q 839 1 839 12 L 839 30 L 1 30 Z" fill="#0b1120" />
+  <line x1="1" y1="30" x2="839" y2="30" stroke="#1e293b" stroke-width="1" />
 
-  <!-- Left: Acoustic Waveform Equalizer (FFT Frequency Bins) -->
-  <g transform="translate(30, 0)">
-    <!-- Spectrum Baseline -->
-    <line x1="0" y1="120" x2="420" y2="120" stroke="#334155" stroke-width="1" />
+  <!-- Window Dots -->
+  <circle cx="16" cy="15" r="4" fill="#ef4444" />
+  <circle cx="30" cy="15" r="4" fill="#f59e0b" />
+  <circle cx="44" cy="15" r="4" fill="#10b981" />
+
+  <!-- DSP Suite Title -->
+  <text x="65" y="19" fill="#94a3b8" font-family="'Fira Code', monospace" font-size="11" font-weight="600">ECHOLOCATE // pyroomacoustics 0.8.2 // GCC-PHAT TDOA &amp; SRP BEAMFORMER</text>
+  <text x="630" y="19" fill="#34d399" font-family="'Fira Code', monospace" font-size="10.5">fs: 48.0 kHz | SNR: +24.8 dB</text>
+
+  <!-- ========================================== -->
+  <!-- PANE 1: DUAL-CHANNEL REAL-TIME OSCILLOGRAM -->
+  <!-- ========================================== -->
+  <g transform="translate(18, 38)">
+    <!-- Pane Box -->
+    <rect x="0" y="0" width="245" height="190" rx="6" fill="#070b14" stroke="#1e293b" stroke-width="1" />
+    <text x="10" y="16" fill="#38bdf8" font-family="'Fira Code', monospace" font-size="9.5" font-weight="700">CH0 &amp; CH1 RAW OSCILLOGRAM</text>
+    <text x="165" y="16" fill="#64748b" font-family="'Fira Code', monospace" font-size="8">Δt = 0.82ms</text>
+
+    <!-- Grid lines -->
+    <g stroke="#1e293b" stroke-dasharray="2,2" stroke-width="0.7">
+      <line x1="10" y1="50" x2="235" y2="50" />
+      <line x1="10" y1="85" x2="235" y2="85" />
+      <line x1="10" y1="120" x2="235" y2="120" />
+      <line x1="10" y1="155" x2="235" y2="155" />
+      <line x1="65" y1="26" x2="65" y2="175" />
+      <line x1="122" y1="26" x2="122" y2="175" />
+      <line x1="180" y1="26" x2="180" y2="175" />
+    </g>
+
+    <!-- Center Baselines -->
+    <line x1="10" y1="70" x2="235" y2="70" stroke="#334155" stroke-width="0.8" />
+    <line x1="10" y1="135" x2="235" y2="135" stroke="#334155" stroke-width="0.8" />
+
+    <!-- Channel 0: Reference Mic (Direct Acoustic Arrival + RT60 Reverberation Decay) -->
+    <!-- Signal Curve: Direct wavefront arrival at t=40, then exponential decay -->
+    <path d="M 10 70 L 35 70 C 40 70, 42 35, 45 35 C 48 35, 50 105, 54 105 C 58 105, 62 48, 66 48 C 70 48, 74 88, 78 88 C 82 88, 86 58, 90 58 C 95 58, 100 78, 105 78 C 112 78, 120 65, 128 65 C 140 65, 155 74, 170 70 L 235 70" 
+          fill="none" stroke="url(#waveRefGrad)" stroke-width="1.6" stroke-dasharray="240" class="wave-live-0 noise-jitter" />
     
-    <!-- 18 Animated Frequency Bars -->
-    <rect class="b1" x="10" width="14" rx="3" fill="url(#eqGrad)" />
-    <rect class="b2" x="32" width="14" rx="3" fill="url(#eqGrad)" />
-    <rect class="b3" x="54" width="14" rx="3" fill="url(#eqGrad)" />
-    <rect class="b4" x="76" width="14" rx="3" fill="url(#eqGrad)" />
-    <rect class="b2" x="98" width="14" rx="3" fill="url(#eqGrad)" />
-    <rect class="b5" x="120" width="14" rx="3" fill="url(#eqGrad)" />
-    <rect class="b1" x="142" width="14" rx="3" fill="url(#eqGrad)" />
-    <rect class="b3" x="164" width="14" rx="3" fill="url(#eqGrad)" />
-    <rect class="b4" x="186" width="14" rx="3" fill="url(#eqGrad)" />
-    <rect class="b5" x="208" width="14" rx="3" fill="url(#eqGrad)" />
-    <rect class="b2" x="230" width="14" rx="3" fill="url(#eqGrad)" />
-    <rect class="b1" x="252" width="14" rx="3" fill="url(#eqGrad)" />
-    <rect class="b4" x="274" width="14" rx="3" fill="url(#eqGrad)" />
-    <rect class="b3" x="296" width="14" rx="3" fill="url(#eqGrad)" />
-    <rect class="b5" x="318" width="14" rx="3" fill="url(#eqGrad)" />
-    <rect class="b2" x="340" width="14" rx="3" fill="url(#eqGrad)" />
-    <rect class="b1" x="362" width="14" rx="3" fill="url(#eqGrad)" />
-    <rect class="b4" x="384" width="14" rx="3" fill="url(#eqGrad)" />
+    <!-- Channel 1: Delayed Mic Arrival (Shifted right by Δt = 0.82ms ~ 20px) -->
+    <path d="M 10 135 L 55 135 C 60 135, 62 100, 65 100 C 68 100, 70 170, 74 170 C 78 170, 82 113, 86 113 C 90 113, 94 153, 98 153 C 102 153, 106 123, 110 123 C 115 123, 120 143, 125 143 C 132 143, 140 130, 148 130 C 160 130, 175 139, 190 135 L 235 135" 
+          fill="none" stroke="url(#waveDelayedGrad)" stroke-width="1.6" stroke-dasharray="240" class="wave-live-1 noise-jitter" />
 
-    <!-- Frequency labels -->
-    <text x="10" y="136" fill="#64748b" font-family="'Fira Code', monospace" font-size="9">100Hz</text>
-    <text x="186" y="136" fill="#64748b" font-family="'Fira Code', monospace" font-size="9">4.2kHz (Peak TDOA)</text>
-    <text x="375" y="136" fill="#64748b" font-family="'Fira Code', monospace" font-size="9">20kHz</text>
+    <!-- Phase Delay Bracket Indicator -->
+    <line x1="45" y1="28" x2="65" y2="28" stroke="#f59e0b" stroke-width="1.2" />
+    <line x1="45" y1="25" x2="45" y2="31" stroke="#f59e0b" stroke-width="1.2" />
+    <line x1="65" y1="25" x2="65" y2="31" stroke="#f59e0b" stroke-width="1.2" />
+    <text x="70" y="30" fill="#f59e0b" font-family="'Fira Code', monospace" font-size="7.5" font-weight="700">TDOA: +0.82ms</text>
+
+    <!-- Legends -->
+    <circle cx="16" cy="68" r="3" fill="#38bdf8" />
+    <text x="24" y="71" fill="#38bdf8" font-family="'Fira Code', monospace" font-size="8">MIC_00 (REF)</text>
+
+    <circle cx="16" cy="133" r="3" fill="#c084fc" />
+    <text x="24" y="136" fill="#c084fc" font-family="'Fira Code', monospace" font-size="8">MIC_01 (ARRIVED)</text>
+
+    <text x="10" y="182" fill="#475569" font-family="'Fira Code', monospace" font-size="7.5">TIME WINDOW: 5.0ms (48kHz PCM)</text>
   </g>
 
-  <!-- Divider -->
-  <line x1="475" y1="36" x2="475" y2="148" stroke="#1e293b" stroke-width="1" />
+  <!-- ============================================== -->
+  <!-- PANE 2: GCC-PHAT CROSS-CORRELATION FUNCTION R(τ) -->
+  <!-- ============================================== -->
+  <g transform="translate(275, 38)">
+    <rect x="0" y="0" width="285" height="190" rx="6" fill="#070b14" stroke="#1e293b" stroke-width="1" />
+    <text x="10" y="16" fill="#818cf8" font-family="'Fira Code', monospace" font-size="9.5" font-weight="700">GCC-PHAT CROSS-CORRELATION R̂(τ)</text>
+    <text x="210" y="16" fill="#34d399" font-family="'Fira Code', monospace" font-size="8">WHITENED: OK</text>
 
-  <!-- Right: Polar Multilateration Polar Scope -->
-  <g transform="translate(605, 88)">
-    <!-- Polar Range Rings -->
-    <circle cx="0" cy="0" r="48" fill="none" stroke="#1e293b" stroke-width="1" />
-    <circle cx="0" cy="0" r="32" fill="none" stroke="#1e293b" stroke-width="1" stroke-dasharray="2,2" />
-    <circle cx="0" cy="0" r="16" fill="none" stroke="#334155" stroke-width="1" />
+    <!-- Grid lines -->
+    <g stroke="#1e293b" stroke-dasharray="2,2" stroke-width="0.7">
+      <line x1="10" y1="50" x2="275" y2="50" />
+      <line x1="10" y1="90" x2="275" y2="90" />
+      <line x1="10" y1="130" x2="275" y2="130" />
+      <line x1="72" y1="26" x2="72" y2="165" />
+      <line x1="142" y1="26" x2="142" y2="165" /> <!-- Center tau = 0 -->
+      <line x1="212" y1="26" x2="212" y2="165" />
+    </g>
 
-    <!-- Axis Crosshairs -->
-    <line x1="-54" y1="0" x2="54" y2="0" stroke="#1e293b" stroke-width="0.8" />
-    <line x1="0" y1="-54" x2="0" y2="54" stroke="#1e293b" stroke-width="0.8" />
+    <!-- Tau=0 Center Reference Line -->
+    <line x1="142" y1="26" x2="142" y2="165" stroke="#334155" stroke-width="1" />
+    <text x="135" y="174" fill="#475569" font-family="'Fira Code', monospace" font-size="8">0.0</text>
+    <text x="60" y="174" fill="#475569" font-family="'Fira Code', monospace" font-size="8">-1.0ms</text>
+    <text x="200" y="174" fill="#475569" font-family="'Fira Code', monospace" font-size="8">+1.0ms</text>
+    <text x="10" y="174" fill="#475569" font-family="'Fira Code', monospace" font-size="8">-2.0ms</text>
+    <text x="250" y="174" fill="#475569" font-family="'Fira Code', monospace" font-size="8">+2.0ms</text>
 
-    <!-- 4 Microphones in Array -->
-    <rect x="-24" y="-24" width="6" height="6" rx="1" fill="#38bdf8" />
-    <rect x="18" y="-24" width="6" height="6" rx="1" fill="#38bdf8" />
-    <rect x="-24" y="18" width="6" height="6" rx="1" fill="#38bdf8" />
-    <rect x="18" y="18" width="6" height="6" rx="1" fill="#38bdf8" />
+    <!-- Noise Floor Baseline -->
+    <line x1="10" y1="145" x2="275" y2="145" stroke="#1e293b" stroke-width="1" />
 
-    <!-- Angle Vector to Source (θ = 42.8°) -->
-    <line x1="0" y1="0" x2="32" y2="-29" stroke="#f43f5e" stroke-width="2" />
-    <circle cx="32" cy="-29" r="5" fill="#f43f5e" />
-    <circle cx="32" cy="-29" r="6" fill="none" stroke="#f43f5e" stroke-width="1.5" class="ping-wave" />
+    <!-- GCC-PHAT Cross-Correlation Curve: Flat noise floor with sharp Dirac-like peak at tau = +0.82ms (x = 142 + 58 = 200) -->
+    <!-- Closed path with fill -->
+    <path d="M 10 145 
+             L 30 144 L 50 146 L 70 143 L 90 145 L 110 144 L 130 146 L 150 144 L 170 145 
+             L 185 143 L 192 135 L 196 95 L 200 42 L 204 95 L 208 135 L 215 143 
+             L 230 145 L 250 144 L 275 145 L 275 145 L 10 145 Z" 
+          fill="url(#phatGlow)" />
 
-    <!-- Labels -->
-    <text x="38" y="-32" fill="#fb7185" font-family="'Fira Code', monospace" font-size="9" font-weight="700">SOURCE</text>
-    <text x="-48" y="52" fill="#64748b" font-family="'Fira Code', monospace" font-size="8.5">4-MIC PYRAMID ARRAY</text>
+    <!-- Crisp Curve Stroke -->
+    <path d="M 10 145 
+             L 30 144 L 50 146 L 70 143 L 90 145 L 110 144 L 130 146 L 150 144 L 170 145 
+             L 185 143 L 192 135 L 196 95 L 200 42 L 204 95 L 208 135 L 215 143 
+             L 230 145 L 250 144 L 275 145" 
+          fill="none" stroke="#38bdf8" stroke-width="1.8" />
+
+    <!-- Peak Spike Telemetry Tag -->
+    <line x1="200" y1="42" x2="200" y2="145" stroke="#38bdf8" stroke-width="1" stroke-dasharray="2,2" />
+    <circle cx="200" cy="42" r="3.5" fill="#38bdf8" />
+    <circle cx="200" cy="42" r="4.5" fill="none" stroke="#38bdf8" stroke-width="1.5" class="peak-ring" />
+
+    <g transform="translate(148, 30)">
+      <rect x="0" y="0" width="102" height="18" rx="3" fill="#0f172a" stroke="#38bdf8" stroke-width="1" />
+      <text x="6" y="12" fill="#38bdf8" font-family="'Fira Code', monospace" font-size="8" font-weight="700">τ̂ = +0.82ms [PEAK]</text>
+    </g>
+
+    <!-- Academic Formula Caption -->
+    <text x="10" y="184" fill="#64748b" font-family="'Fira Code', monospace" font-size="7.5">ψ_PHAT(f) = 1 / |X₁(f)·X₂*(f)|  [ACOUSTIC WHITENING]</text>
   </g>
+
+  <!-- ====================================================== -->
+  <!-- PANE 3: 4-MIC PYRAMID ARRAY & STEERED RESPONSE POWER -->
+  <!-- ====================================================== -->
+  <g transform="translate(572, 38)">
+    <rect x="0" y="0" width="250" height="190" rx="6" fill="#070b14" stroke="#1e293b" stroke-width="1" />
+    <text x="10" y="16" fill="#f43f5e" font-family="'Fira Code', monospace" font-size="9.5" font-weight="700">SRP-PHAT POLAR SCOPE</text>
+    <text x="175" y="16" fill="#fb7185" font-family="'Fira Code', monospace" font-size="8">θ = 42.8°</text>
+
+    <!-- Polar Coordinate Center (x: 125, y: 105) -->
+    <g transform="translate(125, 105)">
+      <!-- Polar Range Rings -->
+      <circle cx="0" cy="0" r="68" fill="none" stroke="#1e293b" stroke-width="0.8" />
+      <circle cx="0" cy="0" r="48" fill="none" stroke="#1e293b" stroke-width="0.8" stroke-dasharray="2,2" />
+      <circle cx="0" cy="0" r="28" fill="none" stroke="#1e293b" stroke-width="0.8" stroke-dasharray="2,2" />
+
+      <!-- Radial Angle Vectors -->
+      <line x1="-72" y1="0" x2="72" y2="0" stroke="#1e293b" stroke-width="0.8" />
+      <line x1="0" y1="-72" x2="0" y2="72" stroke="#1e293b" stroke-width="0.8" />
+      <line x1="-50" y1="-50" x2="50" y2="50" stroke="#1e293b" stroke-dasharray="2,2" stroke-width="0.6" />
+      <line x1="-50" y1="50" x2="50" y2="-50" stroke="#1e293b" stroke-dasharray="2,2" stroke-width="0.6" />
+
+      <!-- Degree Angle Markers -->
+      <text x="74" y="3" fill="#475569" font-family="'Fira Code', monospace" font-size="7">0°</text>
+      <text x="-84" y="3" fill="#475569" font-family="'Fira Code', monospace" font-size="7">180°</text>
+      <text x="-6" y="-74" fill="#475569" font-family="'Fira Code', monospace" font-size="7">90°</text>
+      <text x="-8" y="80" fill="#475569" font-family="'Fira Code', monospace" font-size="7">270°</text>
+
+      <!-- Steered Response Power (SRP) Spatial Acoustic Heat Beam (Rotated θ = 42.8°) -->
+      <g transform="rotate(-42.8)">
+        <!-- Translucent High-Gain Spatial Main Lobe -->
+        <path d="M 0 0 C 25 -18, 55 -14, 65 0 C 55 14, 25 18, 0 0 Z" fill="url(#beamLobe)" />
+        <line x1="0" y1="0" x2="65" y2="0" stroke="#f43f5e" stroke-width="1.8" />
+        
+        <!-- Detected Acoustic Source Target -->
+        <circle cx="65" cy="0" r="3.5" fill="#f43f5e" />
+        <circle cx="65" cy="0" r="4.5" fill="none" stroke="#f43f5e" stroke-width="1.5" class="source-wave" />
+      </g>
+
+      <!-- 4-Microphone Tetrahedral Geometry (Scaled d = 8cm aperture) -->
+      <!-- Mic 0 -->
+      <rect x="-18" y="-18" width="6" height="6" rx="1.5" fill="#38bdf8" stroke="#ffffff" stroke-width="0.6" />
+      <text x="-26" y="-20" fill="#38bdf8" font-family="'Fira Code', monospace" font-size="6.5" font-weight="700">M0</text>
+
+      <!-- Mic 1 -->
+      <rect x="12" y="-18" width="6" height="6" rx="1.5" fill="#38bdf8" stroke="#ffffff" stroke-width="0.6" />
+      <text x="18" y="-20" fill="#38bdf8" font-family="'Fira Code', monospace" font-size="6.5" font-weight="700">M1</text>
+
+      <!-- Mic 2 -->
+      <rect x="-18" y="12" width="6" height="6" rx="1.5" fill="#38bdf8" stroke="#ffffff" stroke-width="0.6" />
+      <text x="-26" y="24" fill="#38bdf8" font-family="'Fira Code', monospace" font-size="6.5" font-weight="700">M2</text>
+
+      <!-- Mic 3 (Center Apex) -->
+      <circle cx="0" cy="0" r="3" fill="#a855f7" stroke="#ffffff" stroke-width="0.6" />
+      <text x="4" y="-3" fill="#a855f7" font-family="'Fira Code', monospace" font-size="6.5" font-weight="700">M3</text>
+    </g>
+
+    <!-- Source Target Readout Label -->
+    <g transform="translate(10, 162)">
+      <text x="0" y="10" fill="#fb7185" font-family="'Fira Code', monospace" font-size="8" font-weight="700">TARGET: (r=1.24m, θ=42.8°, φ=18.2°)</text>
+      <text x="0" y="20" fill="#64748b" font-family="'Fira Code', monospace" font-size="7">SRP POWER: -3.2 dBFS | CONF: 98.4%</text>
+    </g>
+  </g>
+
+  <!-- ====================================================== -->
+  <!-- BOTTOM TELEMETRY TERMINAL OVERLAY BAR (SYSTEM METRICS) -->
+  <!-- ====================================================== -->
+  <path d="M 1 234 L 839 234" stroke="#1e293b" stroke-width="1" />
+  <rect x="1" y="235" width="838" height="24" fill="#060913" fill-opacity="0.95" />
+
+  <text x="16" y="250" fill="#64748b" font-family="'Fira Code', monospace" font-size="9.5">SOLVER: Levenberg-Marquardt Multilateration</text>
+  <text x="290" y="250" fill="#38bdf8" font-family="'Fira Code', monospace" font-size="9.5">SPEED OF SOUND c: 343.2 m/s (@ 20°C)</text>
+  <text x="550" y="250" fill="#34d399" font-family="'Fira Code', monospace" font-size="9.5">SPATIAL RES: ±1.2°</text>
+  <text x="705" y="250" fill="#22c55e" font-family="'Fira Code', monospace" font-size="9.5" font-weight="700">CONVERGENCE: PASS</text>
 </svg>

@@ -29,13 +29,13 @@
 <div align="center">
   <!-- 2D AMR Warehouse Coordination Radar -->
   <img src="assets/simulation_radar.svg" width="100%" alt="AMR Fleet Coordination Radar" />
-  <p><sub><strong>Fig 1:</strong> Decentralized AMR Conflict Resolution — 2D space-time grid trajectory planning with dynamic waypoint beacons.</sub></p>
+  <p><sub><strong>Fig 1:</strong> Decentralized AMR Conflict Resolution — ROS 2 Nav2 global costmap inflation halos, differential-drive chassis kinematics, and Space-Time A* trajectory planning with dynamic PIBT yield token handover.</sub></p>
 
   <br/>
 
   <!-- Acoustic TDOA Spectrum Visualizer -->
   <img src="assets/acoustic_spectrum.svg" width="100%" alt="EchoLocate Acoustic Spectrum" />
-  <p><sub><strong>Fig 2:</strong> EchoLocate Signal Pipeline — Real-time GCC-PHAT FFT frequency bins with 4-channel polar angle multilateration.</sub></p>
+  <p><sub><strong>Fig 2:</strong> EchoLocate Signal Pipeline — Dual-channel acoustic impulse response ($x_0(t)$ vs $x_1(t)$), GCC-PHAT cross-correlation Dirac peak ($\tau = +0.82\text{ms}$), and 4-microphone SRP-PHAT polar beamforming.</sub></p>
 </div>
 
 ---
